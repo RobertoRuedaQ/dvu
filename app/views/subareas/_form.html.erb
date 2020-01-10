@@ -1,0 +1,32 @@
+<%= form_with(model: subarea, local: true) do |form| %>
+  <% if subarea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subarea.errors.count, "error") %> prohibited this subarea from being saved:</h2>
+
+      <ul>
+        <% subarea.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :subarea_name %>
+    <%= form.text_field :subarea_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subarea_code %>
+    <%= form.text_field :subarea_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area %>
+    <%= form.collection_select :area_id, @area, :id, :area_name, prompt: "Elige una área" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

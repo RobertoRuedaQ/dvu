@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subprogram_name: MyString
+  subprogram_code: MyString
+  program: 
+
+two:
+  subprogram_name: MyString
+  subprogram_code: MyString
+  program: 

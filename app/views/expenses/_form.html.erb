@@ -1,0 +1,67 @@
+<%= form_with(model: expense, local: true) do |form| %>
+  <% if expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+
+      <ul>
+        <% expense.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :expense_type %>
+    <%= form.select :expense_type, Expense::EXPENSES_TYPES, prompt: "Elige Uno" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_type %>
+    <%= form.select :client_type, Expense::CLIENTS_TYPES, prompt: "elige Uno" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bill_number %>
+    <%= form.text_field :bill_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :siaf_code %>
+    <%= form.text_field :siaf_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :budget %>
+    <%= form.collection_select :budget_id, @budget, :id, :item %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activity_id %>
+    <%= form.collection_select :activity_id, @activity, :id, :activity_name%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

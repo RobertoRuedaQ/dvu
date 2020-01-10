@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subarea name:</strong>
+  <%= @subarea.subarea_name %>
+</p>
+
+<p>
+  <strong>Subarea code:</strong>
+  <%= @subarea.subarea_code %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @subarea.area.area_name %>
+</p>
+
+<%= link_to 'Edit', edit_subarea_path(@subarea) %> |
+<%= link_to 'Back', subareas_path %>

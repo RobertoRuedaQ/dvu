@@ -1,0 +1,27 @@
+<%= form_with(model: campu, local: true) do |form| %>
+  <% if campu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(campu.errors.count, "error") %> prohibited this campu from being saved:</h2>
+
+      <ul>
+        <% campu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :campus_name %>
+    <%= form.text_field :campus_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :campus_code %>
+    <%= form.text_field :campus_code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Subprograms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subprogram name</th>
+      <th>Subprogram code</th>
+      <th>Program</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subprograms.each do |subprogram| %>
+      <tr>
+        <td><%= subprogram.subprogram_name %></td>
+        <td><%= subprogram.subprogram_code %></td>
+        <td><%= subprogram.program.program_name %></td>
+        <td><%= link_to 'Show', subprogram %></td>
+        <td><%= link_to 'Edit', edit_subprogram_path(subprogram) %></td>
+        <td><%= link_to 'Destroy', subprogram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subprogram', new_subprogram_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subprogram name:</strong>
+  <%= @subprogram.subprogram_name %>
+</p>
+
+<p>
+  <strong>Subprogram code:</strong>
+  <%= @subprogram.subprogram_code %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @subprogram.program.program_name %>
+</p>
+
+<%= link_to 'Edit', edit_subprogram_path(@subprogram) %> |
+<%= link_to 'Back', subprograms_path %>

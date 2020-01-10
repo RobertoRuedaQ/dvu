@@ -1,0 +1,32 @@
+<%= form_with(model: subprogram, local: true) do |form| %>
+  <% if subprogram.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subprogram.errors.count, "error") %> prohibited this subprogram from being saved:</h2>
+
+      <ul>
+        <% subprogram.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :subprogram_name %>
+    <%= form.text_field :subprogram_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subprogram_code %>
+    <%= form.text_field :subprogram_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :program %>
+    <%= form.collection_select :program_id, @program, :id, :program_name, prompt: "Elige un programa" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
