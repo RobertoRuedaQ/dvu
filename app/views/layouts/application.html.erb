@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dvu</title>
+    <title>Dirección de Vida Universitaria</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,11 @@
 
   <body>
     <div class="container">
-      <%= yield %>
+      <%= render "layouts/sidebar" %>
+      <div class="main-panel">
+        <%= yield %>    
+      </div>
     </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
