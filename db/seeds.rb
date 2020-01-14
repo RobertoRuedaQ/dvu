@@ -94,8 +94,6 @@ Budget.create!(
   ]
 )
 
-Place.create!()
-
 Place.create!(place_name:"AUDITORIO ROJO EDIFICIO JUAN VARGAS", campus_id: 1 , capacity: 128)
 Place.create!(place_name:"AUDITORIO AZUL EDIFICIO JUAN VARGAS", campus_id: 1 ,capacity: 128)
 Place.create!(place_name:"AUDITORIO HOUSTON edif. Justo Ramón", campus_id: 1 ,capacity: 168)
@@ -119,3 +117,46 @@ Place.create!(place_name:"TEATRINO", campus_id: 1 , capacity: 200)
 Place.create!(place_name:"PARQUEADERO" , campus_id: 1 , capacity: 480)
 Place.create!(place_name:"SALA DE MÚSICA", campus_id: 1 , capacity: 120)
 Place.create!(place_name:"SALÓN DE LOS ESPEJOS", campus_id: 1 , capacity: 28)
+Place.create!(place_name:"AUDITORIO HNO. DANIEL	BLOQUE E- PISO 1°", capacity:160, campus_id:2)
+Place.create!(place_name:"SALA DE CONFERENCIAS	BLOQUE B- PISO 2°", capacity:186, campus_id:2)
+Place.create!(place_name:"SALA DE SUSTENTACIÓN 1	BLOQUE D - PISO 5°", capacity:16, campus_id:2)
+Place.create!(place_name:"SALA DE SUSTENTACIÓN 2	BLOQUE D - PISO 5°", capacity:15, campus_id:2)
+Place.create!(place_name:"AUDITORIO ENRIQUE LOW MURTRA	BLOQUE A- PISO 2°",capacity:24, campus_id:2)
+Place.create!(place_name:"TEATRO",capacity:2000, campus_id:2)
+Place.create!(place_name:"SALA DE RECEPCIONES	BLOQUE F - PISO 2°", capacity:500, campus_id:2)
+Place.create!(place_name:"AUDITORIO  NIVEL 0	BLOQUE A- NIVEL 0", capacity:	48, campus_id:2)
+Place.create!(place_name:"PLAZOLETA", capacity:	17, campus_id:2)
+Place.create!(place_name:"IGLESIA DE LA SANTA CRUZ", capacity:498, campus_id:2)
+
+Place.create!(place_name:"TEATRO", capacity:506, campus_id:3)
+Place.create!(place_name:"SALÓN HNO. JUAN VARGAS (Salón 331)", capacity:506, campus_id:3)
+Place.create!(place_name:"HNO. FAUSTO SALVADOR (Salón 330)", capacity:506, campus_id:3)
+Place.create!(place_name:"TORREON", capacity:506, campus_id:3)
+Place.create!(place_name:"SALA DE JUNTAS", capacity:506, campus_id:3)
+Place.create!(place_name:"AUDITORIO SAN BENILDO", capacity:506, campus_id:3)
+Place.create!(place_name:"IGLESIA INMACULADA CONCEPCIÓN", capacity:506, campus_id:3)
+
+Subprogram.create!([
+{subprogram_name:"Espiritual", subprogram_code:"2", program_id:1},
+{subprogram_name:"Social", subprogram_code:"3", program_id:1},
+{subprogram_name:"Comunidades", subprogram_code:"1", program_id:2},
+{subprogram_name:"Representación", subprogram_code:"2", program_id:2},
+{subprogram_name:"Centros de interés", subprogram_code:"3", program_id:2},
+{subprogram_name:"Liderazgo", subprogram_code:"1", program_id:3},
+{subprogram_name:"Ciudadanía", subprogram_code:"2", program_id:3},
+{subprogram_name:"Pastoral", subprogram_code:"3", program_id:3},
+{subprogram_name:"Catequesis", subprogram_code:"4", program_id:3},
+{subprogram_name:"Proyección Social", subprogram_code:"5", program_id:3},
+{subprogram_name:"Música", subprogram_code:"6", program_id:3},
+{subprogram_name:"Teatro", subprogram_code:"7", program_id:3},
+{subprogram_name:"Danza", subprogram_code:"8", program_id:3},
+{subprogram_name:"Arte Plástico", subprogram_code:"9", program_id:3},
+{subprogram_name:"Artes y Diseño", subprogram_code:"10", program_id:3},
+{subprogram_name:"Clúster DHIS", subprogram_code:"11", program_id:3},
+{subprogram_name:"Presentación Artística", subprogram_code:"1", program_id:4},
+{subprogram_name:"Festival", subprogram_code:"2", program_id:4},
+{subprogram_name:"Intervención", subprogram_code:"3", program_id:4},
+{subprogram_name:"Acciones Sociales", subprogram_code:"1", program_id:5},
+{subprogram_name:"Voluntariado", subprogram_code:"2", program_id:5},
+{subprogram_name:"Misiones", subprogram_code:"3", program_id:5}
+  ])
