@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Places</h1>
+<h1>Lugares</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Place name</th>
-      <th>Capacity</th>
-      <th>Campus</th>
+      <th>Nombre</th>
+      <th>Capacidad</th>
+      <th>Sede</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,20 @@
         <td><%= place.place_name %></td>
         <td><%= place.capacity %></td>
         <td><%= place.campus.campus_name %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to place do %>
+          <i class="fas fa-eye"></i>
+          <%end %>
+        </td>
+        
+        <td><%= link_to edit_place_path(place) do %>
+            <i class="far fa-edit"></i>
+          <%end %>
+        </td>
+
+        <td><%= link_to  place, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="far fa-trash-alt"></i>
+          <%end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

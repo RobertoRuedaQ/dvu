@@ -12,52 +12,52 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :expense_type %>
+    <%= form.label :expense_type, "Tipo de gasto" %>
     <%= form.select :expense_type, Expense::EXPENSES_TYPES, prompt: "Elige Uno" %>
   </div>
 
   <div class="field">
-    <%= form.label :client_type %>
+    <%= form.label :client_type, "Tipo de cliente" %>
     <%= form.select :client_type, Expense::CLIENTS_TYPES, prompt: "elige Uno" %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, "Nombre del cliente" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :bill_number %>
+    <%= form.label :bill_number, "Número de factura" %>
     <%= form.text_field :bill_number %>
   </div>
 
   <div class="field">
-    <%= form.label :siaf_code %>
+    <%= form.label :siaf_code, "Código SIAF" %>
     <%= form.text_field :siaf_code %>
   </div>
 
   <div class="field">
-    <%= form.label :amount %>
+    <%= form.label :amount, "Costo" %>
     <%= form.number_field :amount %>
   </div>
 
   <div class="field">
-    <%= form.label :budget %>
+    <%= form.label :budget, "Rubro" %>
     <%= form.collection_select :budget_id, @budget, :id, :item %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description, "Descripción" %>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.datetime_select :date %>
+    <%= form.label :date, "Fecha de registro" %>
+    <%= form.date_select :date %>
   </div>
 
   <div class="field">
-    <%= form.label :activity_id %>
+    <%= form.label :activity_id, "Actividad Vinculada" %>
     <%= form.collection_select :activity_id, @activity, :id, :activity_name%>
   </div>
 
