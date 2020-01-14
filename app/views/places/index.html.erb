@@ -17,7 +17,7 @@
       <tr>
         <td><%= place.place_name %></td>
         <td><%= place.capacity %></td>
-        <td><%= place.campus_id %></td>
+        <td><%= place.campus.campus_name %></td>
         <td><%= link_to 'Show', place %></td>
         <td><%= link_to 'Edit', edit_place_path(place) %></td>
         <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>

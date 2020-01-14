@@ -1,3 +1,0 @@
-class Campu < ApplicationRecord
-
-end

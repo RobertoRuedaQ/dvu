@@ -8,26 +8,26 @@
 Type.create!
 ([
   { type_name:"Asesoría", type_code: "1"},
-  { type_name:"Asistencia Técnica", type_code: "1"},
-  { type_name:"Coloquio", type_code: "1"},
-  { type_name:"Conferencia", type_code: "1"},
-  { type_name:"Congreso", type_code: "1"},
-  { type_name:"Consultoría", type_code: "1"},
-  { type_name:"Curso libre", type_code: "1"},
-  { type_name:"Diplomado", type_code: "1"},
-  { type_name:"Foro", type_code: "1"},
-  { type_name:"Interventoría", type_code: "1"},
-  { type_name:"Mesa redonda", type_code: "1"},
-  { type_name:"Seminario", type_code: "1"},
-  { type_name:"Simposio", type_code: "1"},
-  { type_name:"Taller", type_code: "1"},
-  { type_name:"Presentación Artística", type_code: "1"},
-  { type_name:"Exposición Artística", type_code: "1"},
-  { type_name:"Acto Cultural", type_code: "1"},
-  { type_name:"Reunión", type_code: "1"},
-  { type_name:"Acción Social", type_code: "1"},
-  { type_name:"Ensayo", type_code: "1"},
-  { type_name:"Intervención", type_code: "1"}
+  { type_name:"Asistencia Técnica", type_code: "2"},
+  { type_name:"Coloquio", type_code: "3"},
+  { type_name:"Conferencia", type_code: "4"},
+  { type_name:"Congreso", type_code: "5"},
+  { type_name:"Consultoría", type_code: "6"},
+  { type_name:"Curso libre", type_code: "7"},
+  { type_name:"Diplomado", type_code: "8"},
+  { type_name:"Foro", type_code: "9"},
+  { type_name:"Interventoría", type_code: "10"},
+  { type_name:"Mesa redonda", type_code: "11"},
+  { type_name:"Seminario", type_code: "12"},
+  { type_name:"Simposio", type_code: "13"},
+  { type_name:"Taller", type_code: "14"},
+  { type_name:"Presentación Artística", type_code: "15"},
+  { type_name:"Exposición Artística", type_code: "16"},
+  { type_name:"Acto Cultural", type_code: "17"},
+  { type_name:"Reunión", type_code: "18"},
+  { type_name:"Acción Social", type_code: "19"},
+  { type_name:"Ensayo", type_code: "20"},
+  { type_name:"Intervención", type_code: "21"}
 ])
 
 Area.create!([
@@ -93,3 +93,29 @@ Budget.create!(
     {item: "Elementos publicitarios", account: "51140145", source:"541", department: "4019", amount:5_000_000 }
   ]
 )
+
+Place.create!()
+
+Place.create!(place_name:"AUDITORIO ROJO EDIFICIO JUAN VARGAS", campus_id: 1 , capacity: 128)
+Place.create!(place_name:"AUDITORIO AZUL EDIFICIO JUAN VARGAS", campus_id: 1 ,capacity: 128)
+Place.create!(place_name:"AUDITORIO HOUSTON edif. Justo Ramón", campus_id: 1 ,capacity: 168)
+Place.create!(place_name:"AUDITORIO BAUSCH & LOMB", campus_id: 1 ,capacity: 80)
+Place.create!(place_name:"AUDITORIO BICENTENARIO 1", campus_id: 1 ,capacity: 30)
+Place.create!(place_name:"AUDITORIO BICENTENARIO 2", campus_id: 1 , capacity: 60)
+Place.create!(place_name:"TEATRO", campus_id: 1 , capacity: 936)
+Place.create!(place_name:"SALA DE EXPOSICIONES A", campus_id: 1 ,capacity: 66)
+Place.create!(place_name:"SALA DE EXPOSICIONES B", campus_id: 1 ,capacity: 70)
+Place.create!(place_name:"SALÓN SOCIAL", campus_id: 1 ,capacity: 120)
+Place.create!(place_name:"AULA MULTIPLE" , campus_id: 1 ,capacity: 96)
+Place.create!(place_name:"AUDITORIO CINCUENTENARIO", campus_id: 1 ,capacity: 178)
+Place.create!(place_name:"AUDITORIO HNO. MARTIN CARLOS", campus_id: 1 , capacity: 105)
+Place.create!(place_name:"COMEDOR CONSEJO ACADÉMICO FUNDADORES", campus_id: 1 , capacity: 24)
+Place.create!(place_name:"SALA DE JUNTAS 1 FUNDADORES", campus_id: 1 , capacity: 16)
+Place.create!(place_name:"SALA DE JUNTAS 2 FUNDADORES", campus_id: 1 , capacity: 24)
+Place.create!(place_name:"SALA DE SUSTENTACIÓN 5", campus_id: 1 ,capacity: 16)
+Place.create!(place_name:"SALONES DE CLASE", campus_id: 1 ,capacity: 40)
+Place.create!(place_name:"IGLESIA NUESTRA SEÑORA DE LA ESTRELLA", campus_id: 1 , capacity: 400)
+Place.create!(place_name:"TEATRINO", campus_id: 1 , capacity: 200)
+Place.create!(place_name:"PARQUEADERO" , campus_id: 1 , capacity: 480)
+Place.create!(place_name:"SALA DE MÚSICA", campus_id: 1 , capacity: 120)
+Place.create!(place_name:"SALÓN DE LOS ESPEJOS", campus_id: 1 , capacity: 28)

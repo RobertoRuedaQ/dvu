@@ -8,7 +8,7 @@
       <th>Activity name</th>
       <th>Start date</th>
       <th>End date</th>
-      <th>Campu</th>
+      <th>Campus</th>
       <th>Place</th>
       <th>Type</th>
       <th>Area</th>
@@ -26,14 +26,14 @@
         <td><%= activity.activity_name %></td>
         <td><%= activity.start_date %></td>
         <td><%= activity.end_date %></td>
-        <td><%= activity.campu_id %></td>
-        <td><%= activity.place_id %></td>
-        <td><%= activity.type_id %></td>
-        <td><%= activity.area_id %></td>
-        <td><%= activity.subarea_id %></td>
-        <td><%= activity.action_id %></td>
-        <td><%= activity.program_id %></td>
-        <td><%= activity.subprogram_id %></td>
+        <td><%= activity.campus.campus_name %></td>
+        <td><%= activity.place.place_name %></td>
+        <td><%= activity.type.type_name %></td>
+        <td><%= activity.area.area_name %></td>
+        <td><%= activity.subarea.subarea_name %></td>
+        <td><%= activity.action.action_name %></td>
+        <td><%= activity.program.program_name %></td>
+        <td><%= activity.subprogram.subprogram_name %></td>
         <td><%= link_to 'Show', activity %></td>
         <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
         <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>

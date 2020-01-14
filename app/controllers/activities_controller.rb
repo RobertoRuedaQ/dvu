@@ -57,13 +57,14 @@ class ActivitiesController < ApplicationController
 
     def load_select_values
       @type = Type.all
-      @campus = Campu.all
+      @campus = Campus.all
       @area = Area.all
       @action = Action.all
       @program = Program.all
+      @places = Place.all
     end
 
     def activity_params
-      params.require(:activity).permit(:activity_name, :start_date, :end_date, :campu_id, :place_id, :type_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id)
+      params.require(:activity).permit(:type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id)
     end
 end

@@ -15,6 +15,7 @@ class PlacesController < ApplicationController
   # GET /places/new
   def new
     @place = Place.new
+    @campus = Campus.all
   end
 
   # GET /places/1/edit

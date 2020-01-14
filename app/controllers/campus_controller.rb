@@ -4,7 +4,7 @@ class CampusController < ApplicationController
   # GET /campus
   # GET /campus.json
   def index
-    @campus = Campu.all
+    @campus = Campus.all
   end
 
   # GET /campus/1
@@ -14,7 +14,7 @@ class CampusController < ApplicationController
 
   # GET /campus/new
   def new
-    @campu = Campu.new
+    @campu = Campus.new
   end
 
   # GET /campus/1/edit
@@ -24,7 +24,7 @@ class CampusController < ApplicationController
   # POST /campus
   # POST /campus.json
   def create
-    @campu = Campu.new(campu_params)
+    @campu = Campus.new(campu_params)
 
     respond_to do |format|
       if @campu.save
@@ -64,7 +64,7 @@ class CampusController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_campu
-      @campu = Campu.find(params[:id])
+      @campu = Campus.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

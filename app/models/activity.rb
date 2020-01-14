@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
-  belongs_to :campu
+  belongs_to :campus
   belongs_to :place
   belongs_to :type
   belongs_to :area

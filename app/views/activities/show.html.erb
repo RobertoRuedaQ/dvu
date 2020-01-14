@@ -16,43 +16,43 @@
 </p>
 
 <p>
-  <strong>Campu:</strong>
-  <%= @activity.campu_id %>
+  <strong>Campus:</strong>
+  <%= @activity.campus.campus_name %>
 </p>
 
 <p>
   <strong>Place:</strong>
-  <%= @activity.place_id %>
+  <%= @activity.place.place_name %>
 </p>
 
 <p>
   <strong>Type:</strong>
-  <%= @activity.type_id %>
+  <%= @activity.type.type_name %>
 </p>
 
 <p>
   <strong>Area:</strong>
-  <%= @activity.area_id %>
+  <%= @activity.area.area_name %>
 </p>
 
 <p>
   <strong>Subarea:</strong>
-  <%= @activity.subarea_id %>
+  <%= @activity.subarea.subarea_name %>
 </p>
 
 <p>
   <strong>Action:</strong>
-  <%= @activity.action_id %>
+  <%= @activity.action.action_name %>
 </p>
 
 <p>
   <strong>Program:</strong>
-  <%= @activity.program_id %>
+  <%= @activity.program.program_name %>
 </p>
 
 <p>
   <strong>Subprogram:</strong>
-  <%= @activity.subprogram_id %>
+  <%= @activity.subprogram.subprogram_name %>
 </p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |

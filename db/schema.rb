@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_10_152225) do
+ActiveRecord::Schema.define(version: 2020_01_14_193000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_10_152225) do
     t.string "activity_name"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.bigint "campu_id", null: false
+    t.bigint "campus_id", null: false
     t.bigint "place_id", null: false
     t.bigint "type_id", null: false
     t.bigint "area_id", null: false
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_01_10_152225) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["action_id"], name: "index_activities_on_action_id"
     t.index ["area_id"], name: "index_activities_on_area_id"
-    t.index ["campu_id"], name: "index_activities_on_campu_id"
+    t.index ["campus_id"], name: "index_activities_on_campus_id"
     t.index ["place_id"], name: "index_activities_on_place_id"
     t.index ["program_id"], name: "index_activities_on_program_id"
     t.index ["subarea_id"], name: "index_activities_on_subarea_id"
@@ -130,7 +130,7 @@ ActiveRecord::Schema.define(version: 2020_01_10_152225) do
 
   add_foreign_key "activities", "actions"
   add_foreign_key "activities", "areas"
-  add_foreign_key "activities", "campus"
+  add_foreign_key "activities", "campus", column: "campus_id"
   add_foreign_key "activities", "places"
   add_foreign_key "activities", "programs"
   add_foreign_key "activities", "subareas"
