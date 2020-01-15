@@ -1,15 +1,15 @@
-<% if current_user %>
-  <li>
-     <%= link_to "Hola #{current_user.first_name}!", edit_user_registration_path(current_user) %>
+  <% if current_user %>
+  <li class="nav-item mr-4">
+     <%= link_to "Hola #{current_user.first_name}!", edit_user_registration_path(current_user), class: "nav-text" %>
   </li>
-  <li>
-    <%= link_to "Cerrar Sesión", destroy_user_session_path, class: "btn" %>
+  <li class="nav-item mr-4">
+    <%= link_to "Cerrar Sesión", destroy_user_session_path, class: "nav-text" %>
   </li>
   <%else %>
-  <li> 
-    <%= link_to "Iniciar Sesión", new_user_session_path, class: "btn" %>
+  <li class="nav-item mr-4"> 
+    <%= link_to "Iniciar Sesión", new_user_session_path, class: "nav-text" %>
   </li>
-  <li>
-    <%= link_to "Registrarse", new_user_registration_path, class:"btn" %>
+  <li class="nav-item mr-4">
+    <%= link_to "Registrarse", new_user_registration_path, class: "nav-text" %>
   </li>
 <%end %>
