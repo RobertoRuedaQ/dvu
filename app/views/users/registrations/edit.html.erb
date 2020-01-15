@@ -14,7 +14,7 @@
 
   <div class="field">
     <%= f.label :role, "Rol" %><br />
-    <%= f.select_field :role,  autocomplete: "role" %>
+    <%= f.select :role,  User::ROLES, autocomplete: "role" %>
   </div>
 
   <div class="field">
