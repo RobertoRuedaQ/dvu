@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Áreas</h1>
+<div class="row">
+  <div class="col-md-3">
+    <h1>Áreas</h1>
+  </div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3">
+    <%= link_to 'Registrar Nueva Área', new_area_path, class: "btn btn-outline-success" %>
+  </div>
+</div>
 
 <table class="table table-hover">
   <thead>
@@ -36,5 +45,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Area', new_area_path %>
