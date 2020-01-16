@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  root "data#index"
   devise_for :users
   resources :expenses
   resources :budgets
-root "activities#index"
   resources :activities
   resources :actions
   resources :places
