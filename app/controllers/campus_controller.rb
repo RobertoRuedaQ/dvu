@@ -1,4 +1,5 @@
 class CampusController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_campu, only: [:show, :edit, :update, :destroy]
 
   # GET /campus

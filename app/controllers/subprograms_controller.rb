@@ -1,4 +1,5 @@
 class SubprogramsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_subprogram, only: [:show, :edit, :update, :destroy]
   before_action :set_program, only: [:new]
   # GET /subprograms

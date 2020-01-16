@@ -1,6 +1,7 @@
 class TypesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_type, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /types
   # GET /types.json
   def index
