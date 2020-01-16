@@ -4,4 +4,8 @@ CLIENTS_TYPES = ["Externo", "Interno"]
 
   belongs_to :activity
   belongs_to :budget
+
+  def self.total_expenses
+    pluck(:amount).reduce(:+)
+  end
 end
