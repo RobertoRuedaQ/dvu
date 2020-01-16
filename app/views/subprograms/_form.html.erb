@@ -10,21 +10,23 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="form-row">
+  <div class="form-group col-md-4">
     <%= form.label :subprogram_name %>
-    <%= form.text_field :subprogram_name %>
+    <%= form.text_field :subprogram_name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-4">
     <%= form.label :subprogram_code %>
-    <%= form.text_field :subprogram_code %>
+    <%= form.text_field :subprogram_code, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-4">
     <%= form.label :program %>
-    <%= form.collection_select :program_id, @program, :id, :program_name, prompt: "Elige un programa" %>
+    <%= form.collection_select :program_id, @program, :id, :program_name, prompt: "Elige un programa", class:"form-control" %>
   </div>
+</div>
+ 
 
   <div class="actions">
     <%= form.submit %>

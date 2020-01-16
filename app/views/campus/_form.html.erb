@@ -10,16 +10,18 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="form-row">
+  <div class="form-group col-md-3">
     <%= form.label :campus_name %>
     <%= form.text_field :campus_name %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-3">
     <%= form.label :campus_code %>
     <%= form.text_field :campus_code %>
   </div>
+</div>
+
 
   <div class="actions">
     <%= form.submit %>

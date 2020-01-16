@@ -10,21 +10,23 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :subarea_name %>
-    <%= form.text_field :subarea_name %>
+<div class="form-row">
+  <div class="form-group col-md-3">
+    <%= form.label :subarea_name,"Nombre Subárea" %>
+    <%= form.text_field :subarea_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :subarea_code %>
-    <%= form.text_field :subarea_code %>
+  <div class="form-group col-md-3">
+    <%= form.label :subarea_code,"Código Subárea" %>
+    <%= form.text_field :subarea_code, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-3">
     <%= form.label :area %>
     <%= form.collection_select :area_id, @area, :id, :area_name, prompt: "Elige una área" %>
   </div>
+</div>
+
 
   <div class="actions">
     <%= form.submit %>

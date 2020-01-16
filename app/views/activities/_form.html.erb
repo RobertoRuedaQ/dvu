@@ -11,61 +11,75 @@
         </ul>
       </div>
     <% end %>
-    <div class="field">
+  <div class="form-row">
+    <div class="form-group col-md-2">
       <%= form.label :type_id, "Tipo de actividad" %>
       <%= form.collection_select :type_id, @type, :id, :type_name, prompt: "Escoge uno" %>
     </div>
 
-    <div class="field">
-      <%= form.label :activity_name, "Nombre de la actividad" %>
-      <%= form.text_field :activity_name, autofocus:true %>
-    </div>
-
-    <div class="field">
-      <%= form.label :start_date, "Fecha de Inicio" %>
-      <%= form.date_select :start_date %>
-    </div>
-
-    <div class="field">
-      <%= form.label :end_date, "Fecha de Finalización" %>
-      <%= form.date_select :end_date %>
-    </div>
-
-    <div class="field">
-      <%= form.label :campus, "Campus" %>
-      <%= form.collection_select :campus_id, @campus, :id, :campus_name, prompt: "Escoge uno" %>
-    </div>
-
-    <div class="field">
-      <%= form.label :place_id, "Lugar" %>
-      <%= form.grouped_collection_select :place_id, @campus, :places, :campus_name, :id, :place_name %>
-    </div>
-
-    <div class="field">
+    <div class="form-group col-md-2">
       <%= form.label :area_id, "Área" %>
       <%= form.collection_select :area_id, @area, :id, :area_name, prompt: "Escoge uno" %>
     </div>
 
-    <div class="field">
+    <div class="form-group col-md-2">
       <%= form.label :subarea_id, "Subárea" %>
       <%= form.grouped_collection_select :subarea_id, @area, :subareas,:area_name, :id, :subarea_name  %>
     </div>
 
-    <div class="field">
-      <%= form.label :action_id %>
+    <div class="form-group col-md-2">
+      <%= form.label :action_id, "Proceso" %>
       <%= form.collection_select :action_id, @action, :id, :action_name, prompt: "Escoge uno" %>
     </div>
 
-    <div class="field">
+    <div class="form-group col-md-2">
       <%= form.label :program_id, "Programa" %>
       <%= form.collection_select :program_id, @program, :id, :program_name,  prompt: "Escoge uno" %>
     </div>
 
-    <div class="field">
+    <div class="form-group col-md-2">
       <%= form.label :subprogram_id, "Subprograma" %>
       <%= form.grouped_collection_select :subprogram_id, @program, :subprograms, :program_name, :id, :subprogram_name %>
-
     </div>
+  </div>
+    
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <%= form.label :activity_name, "Nombre de la actividad" %>
+      <%= form.text_field :activity_name, autofocus:true, class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="form-row">
+       
+    <div class="form-group col-md-5">
+      <%= form.label :start_date, "Fecha de Inicio" %>
+      <%= form.date_select :start_date %>
+    </div>
+
+    <div class="form-group col-md-5">
+      <%= form.label :end_date, "Fecha de Finalización" %>
+      <%= form.date_select :end_date %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <%= form.label :campus, "Campus" %>
+      <%= form.collection_select :campus_id, @campus, :id, :campus_name, prompt: "Escoge uno" %>
+    </div>
+
+    <div class="form-group col-md-6">
+      <%= form.label :place_id, "Lugar" %>
+      <%= form.grouped_collection_select :place_id, @campus, :places, :campus_name, :id, :place_name %>
+    </div>
+  </div>
+
+    
+    
+
+    
+
 
     <div class="actions">
       <%= form.submit %>

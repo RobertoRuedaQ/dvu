@@ -10,22 +10,24 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="form-row">
+  <div class="form-group col-md-3">
     <%= form.label :place_name %>
-    <%= form.text_field :place_name %>
+    <%= form.text_field :place_name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-3">
     <%= form.label :capacity %>
-    <%= form.number_field :capacity %>
+    <%= form.number_field :capacity, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-3">
     <%= form.label :campus_id %>
     <%= form.collection_select :campus_id, @campus, :id, :campus_name %>
   </div>
 
+</div>
+ 
   <div class="actions">
     <%= form.submit %>
   </div>

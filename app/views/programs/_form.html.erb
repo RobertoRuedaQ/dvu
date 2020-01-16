@@ -10,16 +10,18 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :program_name %>
-    <%= form.text_field :program_name %>
+<div class="form-row">
+  <div class="form-group col-md-3">
+    <%= form.label :program_name, "Nombre de Programa" %>
+    <%= form.text_field :program_name, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :program_code %>
-    <%= form.text_field :program_code %>
+  <div class="form-group col-md-3">
+    <%= form.label :program_code, "Código del programa" %>
+    <%= form.text_field :program_code, class:"form-control" %>
   </div>
+</div>
+
 
   <div class="actions">
     <%= form.submit %>
