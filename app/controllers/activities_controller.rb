@@ -51,6 +51,13 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def participants
+    @activity = Activity.find(params[:activity][:id])
+    @activity.participants << (params[:activity][:participants])
+    @activity.save
+    redirect_to @activity
+  end
+
   private
     def set_activity
       @activity = Activity.find(params[:id])
@@ -66,6 +73,6 @@ class ActivitiesController < ApplicationController
     end
 
     def activity_params
-      params.require(:activity).permit(:type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id)
+      params.require(:activity).permit(:type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id, :participants)
     end
 end
