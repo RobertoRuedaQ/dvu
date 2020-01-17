@@ -13,7 +13,7 @@
       <%= form_with(model: @activity, url: participants_path,  local: true) do |form| %>
         <%= form.hidden_field :id, value: @activity.id %>
         <%= form.label :participants, "Registrar participante" %>
-        <%= form.text_field :participants, value: "" %>
+        <%= form.number_field :participants, value: "" %>
         <%= form.submit %>
       <%end %>
     </div>
