@@ -23,8 +23,8 @@
 
 
     <div class="form-group col-md-3">
-      <%= form.label :budget, "Rubro" %>
-      <%= form.collection_select :budget_id, @budget, :id, :item %>
+      <%= form.label :budget_id, "Rubro" %>
+      <%= form.collection_select :budget_id, @budget, :id, :item, prompt: "Elige Uno"%>
     </div>
   </div>
 

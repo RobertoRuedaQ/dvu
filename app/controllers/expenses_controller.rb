@@ -22,6 +22,8 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/1/edit
   def edit
+    @budget = Budget.all
+    @activity = Activity.all
   end
 
   # POST /expenses

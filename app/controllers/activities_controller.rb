@@ -15,6 +15,7 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
+    load_select_values
   end
 
   def create
