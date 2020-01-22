@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:index,:show, :edit, :update, :destroy]
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -59,6 +59,18 @@ class ActivitiesController < ApplicationController
     @activity.save
 
     redirect_to @activity
+  end
+
+  def pdf
+    @activity = Activity.find(params[:activity_id])
+  end
+
+  def convert
+    _url = request.base_url + activity_pdf_path
+  	_pdf = Dhalang::PDF.get_from_url(_url)
+  	_file_name = "Report" 
+    File.open("#{Rails.root}/public/#{_file_name}.pdf", "w+b") << _pdf
+	redirect_to "/#{_file_name}.pdf"
   end
 
   private
