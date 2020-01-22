@@ -55,7 +55,9 @@ class ActivitiesController < ApplicationController
   def participants
     @activity = Activity.find(params[:activity][:id])
     @activity.participants << (params[:activity][:participants])
+    @activity.participants.uniq!
     @activity.save
+
     redirect_to @activity
   end
 

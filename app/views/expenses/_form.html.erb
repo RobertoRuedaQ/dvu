@@ -66,13 +66,20 @@
 </div>
 
   
-
-
-
-  <div class="field">
+<div class="form-row">
+  <div class="form-group col-md-3">
     <%= form.label :activity_id, "Actividad Vinculada" %>
     <%= form.collection_select :activity_id, @activity, :id, :activity_name%>
   </div>
+</div>
+
+<div class="form-row">
+  <div class="form-group col-md-3">
+    <%= form.label :petty_cash?, "Caja Menor?" %>
+    <%= form.check_box :petty_cash?, options:{}, checked_value: true%>
+  </div>
+</div>
+
 
   <div class="actions">
     <%= form.submit %>
