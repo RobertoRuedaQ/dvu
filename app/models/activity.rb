@@ -18,4 +18,6 @@ class Activity < ApplicationRecord
   def self.next_activities
     where("start_date > ?", Time.now).select(:activity_name, :start_date).to_a
   end
+
+  scope :activities_of_the_month, -> {where("start_date.month == ?", "#{DateTime.now.month}")}
 end
