@@ -15,9 +15,5 @@ class Activity < ApplicationRecord
     count
   end
 
-  def self.next_activities
-    where("start_date > ?", Time.now).select(:activity_name, :start_date).to_a
-  end
-
-  scope :activities_of_the_month, -> {where("start_date.month == ?", "#{DateTime.now.month}")}
+  scope :activities_of_the_month, -> {where("EXTRACT(MONTH FROM start_date) = ?", DateTime.now.month).select(:activity_name, :start_date) }
 end

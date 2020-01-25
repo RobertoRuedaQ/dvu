@@ -1,39 +1,4 @@
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-md-4">   
-      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Presupuesto general de la dirección</div>
-        <div class="card-body">
-          <h3 class="card-title"><%= number_to_currency(total_budget, precision: 0) %></h3>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Presupuesto ejecutado a la fecha</div>
-        <div class="card-body">
-          <h3 class="card-title"><%= number_to_currency(total_expenses, precision: 0) %></h3>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col-md-4">
-      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header"># de atividades</div>
-        <div class="card-body">
-          <h3 class="card-title"><%= total_activities %></h3>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <%= render "info-cards" %>
+  <%= render "calendar" %>
 </div>
-
-<div class="row">
-  <div class="col-md-10">
-    <ul>
-      <% Activity.activities_of_the_month%>
-    </ul>
-  </div>
-</div>
-

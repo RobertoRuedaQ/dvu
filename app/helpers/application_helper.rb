@@ -17,5 +17,17 @@ module ApplicationHelper
       participants.collect { |p| content_tag(:th, p)}
     end
   end
+
+  def day_of_month(date)
+    date.strftime("%d")
+  end
+
+  def month_in_letter(date)
+    date.strftime("%b")
+  end
+
+  def day_of_the_week(date)
+    date.strftime("%A")
+  end
   
 end
