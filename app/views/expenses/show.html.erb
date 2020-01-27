@@ -27,7 +27,7 @@
 
 <p>
   <strong>Monto:</strong>
-  <%= @expense.amount %>
+  <%= number_to_currency(@expense.amount, precision: 0) %>
 </p>
 
 <p>
@@ -51,8 +51,8 @@
 </p>
 
 <p>
-  <strong>Caja menor?</strong>
-  <%= @expense.petty_cash? %>
+  <strong>¿Caja Menor?</strong>
+  <%= petty_cash(@expense.petty_cash) %>
 </p>
 
 <%= link_to 'Edit', edit_expense_path(@expense) %> |

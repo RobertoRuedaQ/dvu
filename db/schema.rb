@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_145819) do
+ActiveRecord::Schema.define(version: 2020_01_27_163913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_145819) do
     t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "petty_cash?", default: false
+    t.boolean "petty_cash", default: false
     t.index ["activity_id"], name: "index_expenses_on_activity_id"
     t.index ["budget_id"], name: "index_expenses_on_budget_id"
   end

@@ -20,6 +20,7 @@
       <th># de factura</th>
       <th>Código SIAF</th>
       <th>Monto</th>
+      <th>Caja Menor</th>
       <th>Rubro</th>
       <th>Descripción</th>
       <th>Fecha</th>
@@ -36,7 +37,8 @@
         <td><%= expense.name %></td>
         <td><%= expense.bill_number %></td>
         <td><%= expense.siaf_code %></td>
-        <td><%= expense.amount %></td>
+        <td><%= number_to_currency(expense.amount, precision: 0) %></td>
+        <td><%= petty_cash(expense.petty_cash) %></td>
         <td><%= expense.budget.item %></td>
         <td><%= expense.description %></td>
         <td><%= expense.date %></td>

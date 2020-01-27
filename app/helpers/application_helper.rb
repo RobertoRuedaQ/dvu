@@ -29,5 +29,12 @@ module ApplicationHelper
   def day_of_the_week(date)
     date.strftime("%A")
   end
-  
+
+  def petty_cash(expense)
+    if expense == true
+      content_tag(:p, "Sí")
+    else
+      content_tag(:p, "No")
+    end
+  end  
 end
