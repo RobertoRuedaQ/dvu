@@ -11,6 +11,8 @@ class Activity < ApplicationRecord
 
   has_many :expenses
 
+  VALID_PARTICIPANT_REGEX = /^\d{7,10}$/
+
   def self.total_activities
     count
   end

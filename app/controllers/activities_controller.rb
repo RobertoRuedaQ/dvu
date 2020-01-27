@@ -54,11 +54,15 @@ class ActivitiesController < ApplicationController
 
   def participants
     @activity = Activity.find(params[:activity][:id])
-    @activity.participants << (params[:activity][:participants])
-    @activity.participants.uniq!
-    @activity.save
-
-    redirect_to @activity
+    if valid_participant?(params[:activity][:participants]) 
+      @activity.participants << (params[:activity][:participants])
+      @activity.participants.uniq!
+      @activity.save
+      redirect_to @activity, notice: "Participante añadido exitosamente"
+    else
+      redirect_to @activity, notice: 'Participante no válido'
+    end
+    
   end
 
   def pdf
@@ -85,6 +89,10 @@ class ActivitiesController < ApplicationController
       @action = Action.all
       @program = Program.all
       @places = Place.all
+    end
+
+    def valid_participant?(participant)
+      participant.present? &&  (participant =~ Activity::VALID_PARTICIPANT_REGEX)
     end
 
     def activity_params
