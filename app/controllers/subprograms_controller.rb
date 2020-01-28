@@ -29,7 +29,7 @@ class SubprogramsController < ApplicationController
 
     respond_to do |format|
       if @subprogram.save
-        format.html { redirect_to @subprogram, notice: 'Subprogram was successfully created.' }
+        format.html { redirect_to @subprogram, notice: 'SUn nuevo subprograma ha sido creado.' }
         format.json { render :show, status: :created, location: @subprogram }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class SubprogramsController < ApplicationController
   def update
     respond_to do |format|
       if @subprogram.update(subprogram_params)
-        format.html { redirect_to @subprogram, notice: 'Subprogram was successfully updated.' }
+        format.html { redirect_to @subprogram, notice: 'El subprograma se ha actualizado.' }
         format.json { render :show, status: :ok, location: @subprogram }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class SubprogramsController < ApplicationController
   def destroy
     @subprogram.destroy
     respond_to do |format|
-      format.html { redirect_to subprograms_url, notice: 'Subprogram was successfully destroyed.' }
+      format.html { redirect_to subprograms_url, notice: 'El subprograma ha sido eliminado.' }
       format.json { head :no_content }
     end
   end

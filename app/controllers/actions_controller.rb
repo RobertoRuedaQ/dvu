@@ -29,7 +29,7 @@ class ActionsController < ApplicationController
 
     respond_to do |format|
       if @action.save
-        format.html { redirect_to @action, notice: 'Action was successfully created.' }
+        format.html { redirect_to @action, notice: 'Un nuevo proceso ha sido creado.' }
         format.json { render :show, status: :created, location: @action }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ActionsController < ApplicationController
   def update
     respond_to do |format|
       if @action.update(action_params)
-        format.html { redirect_to @action, notice: 'Action was successfully updated.' }
+        format.html { redirect_to @action, notice: 'El proceso ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @action }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ActionsController < ApplicationController
   def destroy
     @action.destroy
     respond_to do |format|
-      format.html { redirect_to actions_url, notice: 'Action was successfully destroyed.' }
+      format.html { redirect_to actions_url, notice: 'El proceso ha sido eliminado.' }
       format.json { head :no_content }
     end
   end

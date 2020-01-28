@@ -29,7 +29,7 @@ class SubareasController < ApplicationController
 
     respond_to do |format|
       if @subarea.save
-        format.html { redirect_to @subarea, notice: 'Subarea was successfully created.' }
+        format.html { redirect_to @subarea, notice: 'Una nueva subárea ha sido creada.' }
         format.json { render :show, status: :created, location: @subarea }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class SubareasController < ApplicationController
   def update
     respond_to do |format|
       if @subarea.update(subarea_params)
-        format.html { redirect_to @subarea, notice: 'Subarea was successfully updated.' }
+        format.html { redirect_to @subarea, notice: 'La Subárea ha sido actualizada.' }
         format.json { render :show, status: :ok, location: @subarea }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class SubareasController < ApplicationController
   def destroy
     @subarea.destroy
     respond_to do |format|
-      format.html { redirect_to subareas_url, notice: 'Subarea was successfully destroyed.' }
+      format.html { redirect_to subareas_url, notice: 'La subárea ha sido eliminada.' }
       format.json { head :no_content }
     end
   end
