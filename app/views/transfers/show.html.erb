@@ -1,0 +1,28 @@
+<p>
+  <strong>De:</strong>
+  <%= @transfer.sender.item %>
+</p>
+
+<p>
+  <strong>Para:</strong>
+  <%= @transfer.receiver.item %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= number_to_currency(@transfer.amount, precision: 0) %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @transfer.description %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @transfer.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_transfer_path(@transfer) %> |
+<%= link_to 'Back', transfers_path %>
