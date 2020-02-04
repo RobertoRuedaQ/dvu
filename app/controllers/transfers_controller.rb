@@ -63,29 +63,11 @@ class TransfersController < ApplicationController
     end
 
     def transfer_amount_between_budgets(transfer_params)
-      sender = Budget.find(transfer_params[:sender_id])
-      reciever = Budget.find(transfer_params[:receiver_id])
-      sleep 1
-
-      p sender
-      p reciever
-
-      sleep 1
-      p sender.amount
-      p reciever.amount
-      sleep 1
-      p transfer_params[:amount].to_i
-
-      sleep 1
-      sender.amount = sender.amount - transfer_params[:amount].to_i
-      sender.save
-      sleep 1
-      p sender
-
-      sleep 1
-      reciever.amount = reciever.amount + transfer_params[:amount].to_i
-      reciever.save
-      sleep 1
-      p reciever
+      ActiveRecord::Base.transaction do
+        sender = Budget.find(transfer_params[:sender_id])
+        reciever = Budget.find(transfer_params[:receiver_id])
+        sender.update!(amount: sender.amount - transfer_params[:amount].to_i)
+        reciever.update!(amount: reciever.amount + transfer_params[:amount].to_i)
+      end
     end
 end
