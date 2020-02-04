@@ -1,21 +1,18 @@
-
-<div class="row">
-  <div class="col-md-5">
-    <h3>Actividades de <%= month_in_letter(DateTime.now) %></h3>
-    <% @activities.each do |a|%>
-      <div class="row row-striped">
-        <div class="col-2 text-right">
-          <h3 class="display-4"><span class="badge badge-secondary"> <%= day_of_month(a.start_date)%></span></h3>
-        </div>
-        <div class="col-2"></div>
-        <div class="col-8">
-          <h5 class="text-uppercase"><strong><%= a.activity_name %></strong></h5>
-          <ul class="list-inline">
-            <li class="list-inline-item"><span class="fas fa-calendar-day" aria-hidden="true"></span> <%= day_of_the_week(a.start_date) %></li>
-            <li class="list-inline-item"><span class="far fa-clock" aria-hidden="true"></span> <%= a.start_date.strftime("%l %P") %></li>
-          </ul>
-        </div>
+<div class="col-md-5">
+  <h3>Actividades de <%= month_in_letter(DateTime.now) %></h3>
+  <% @activities.each do |a|%>
+    <div class="row row-striped">
+      <div class="col-2 text-right">
+        <h3 class="display-4"><span class="badge badge-secondary"> <%= day_of_month(a.start_date)%></span></h3>
       </div>
-    <%end %>
-  </div>
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h5 class="text-uppercase"><strong><%= a.activity_name %></strong></h5>
+        <ul class="list-inline">
+          <li class="list-inline-item"><span class="fas fa-calendar-day" aria-hidden="true"></span> <%= day_of_the_week(a.start_date) %></li>
+          <li class="list-inline-item"><span class="far fa-clock" aria-hidden="true"></span> <%= a.start_date.strftime("%l %P") %></li>
+        </ul>
+      </div>
+    </div>
+  <%end %>
 </div>

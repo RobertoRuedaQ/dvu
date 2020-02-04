@@ -30,7 +30,6 @@ class ExpensesController < ApplicationController
   # POST /expenses.json
   def create
     @expense = Expense.new(expense_params)
-
     respond_to do |format|
       if @expense.save
         format.html { redirect_to @expense, notice: 'Un nuevo gasto ha sido creado.' }
