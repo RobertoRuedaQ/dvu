@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subjects
   root "data#index"
   devise_for :users
   resources :expenses

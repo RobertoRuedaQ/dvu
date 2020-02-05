@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_212325) do
+ActiveRecord::Schema.define(version: 2020_02_04_211745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,21 @@ ActiveRecord::Schema.define(version: 2020_02_03_212325) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["area_id"], name: "index_subareas_on_area_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "title"
+    t.string "short"
+    t.string "code"
+    t.string "hour"
+    t.string "day"
+    t.string "classroom"
+    t.string "campus"
+    t.string "credits"
+    t.string "teacher_name"
+    t.string "faculty"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "subprograms", force: :cascade do |t|
