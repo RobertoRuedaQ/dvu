@@ -189,56 +189,57 @@ Subject.create!(code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Viernes",	short:"Cb"
 Subject.create!(code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Viernes",	short:"Cb",	hour:"0811",	campus:"CHAPINERO",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
 Subject.create!(code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Jueves",	short:"Da",	hour:"1114",campus:"CANDELARIA",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
 Subject.create!(code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Sábado",	short:"Da",	hour:"0710",	campus:"CANDELARIA",	faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
-  ]
-)
 
 
-Subject.create!(code:"DH103",	title:"ARTE CONTEMPORÁNEO EN JAPÓN", day:"Martes",	short:"Acj", 	hour:"1114",	campus:"CHAPINERO",	classroom:"103F", teacher:"KUMAGAI TAKAAKI",faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES"},
-Subject.create!(code:"DH110",	title:"GUERRA Y CIVILIZACIÓN",day:"Lunes",	short:"Gc",	hour:"1114",campus:"CANDELARIA",	teacher:"GARAVITO GOMEZ MARIA CLARA",	faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES"},
-Subject.create!(code:"DH130",	title:"FACTORES QUE AFECTAN LA BIODIVERSIDAD COLOMBIANA",	day:"Jueves", short:"Fab",	hour:"1114",		campus:"CANDELARIA",	teacher:"CAMACHO GARZON JANET",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" },
-{code:"DH131",	title:"COMPRENSIÓN DE LOS COMPONENTES DEL CAMBIO GLOBAL Y DEL DESARROLLO HUMANO",day:"Lunes",	short:"Jd",	hour:"1114",campus:"CANDELARIA",	teacher:"CAMACHO GARZON JANET",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" },
-{code:"DH132",	title:"JUGANDO A SER DETECTIVES",	day:"Jueves",short:"Jd",	hour:"1114",campus:"CANDELARIA",	teacher:"OCHOA CABEZAS DIANA CAROLINA",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" },
-{code:"DH132",	title:"JUGANDO A SER DETECTIVES",	,day:"Martes",	short:"Jd",	hour:"1114",campus:"CHAPINERO",	teacher:"OCHOA CABEZAS DIANA CAROLINA",	faculty:"DEPARTAMENTO  CIENCIAS BÁSICAS" },
-{code:"DH133",	title:"BIOCINE: DE LA FICCIÓN A LA REALIDAD",	"Jueves", short:"Bc",	hour:"1114",campus:"CANDELARIA",	teacher:"LOZANO ARDILA LUCIA CRISTINA",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" },
-{code:"DH133",	title:"BIOCINE: DE LA FICCIÓN A LA REALIDAD",	day:"Lunes",	short:"Bc",	hour:"1114", campus:"CANDELARIA",		teacher:"MUÑOZ ORTIZ ASTRID GEOVANA",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" },
-{code:"DH139",	title:"DURMIENDO CON EL ENEMIGO: EL EXTRAÑO MUNDO DE LAS ENFERMEDADES",	day:"Miércoles",	short:"Eme",	hour:"1114", campus:"NORTE",			faculty:"DEPARTAMENTO  CIENCIAS BÁSICAS" },
-{code:"DH140",	title:"COLOMBIA A TRAVÉS DE SU BIODIVERSIDAD",	,day:"Martes",	short:"Cab",hour:"1114",hour:"1114",	campus:"CHAPINERO",	teacher:"VITOLO LOPEZ ADRIANA LEANDRA",	faculty:"DEPARTAMENTO  CIENCIAS BÁSICAS" },
-{code:"DH142",	title:"MUJERES Y CONOCIMIENTO",	day:"Miércoles",	short:"Mc",	hour:"1114",campus:"NORTE",		faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA"},
-{code:"DH143",	title:"CONFLICTOS INTERNACIONALES Y RELIGIÓN",	"Jueves"	short:"Cir",	hour:"1114",ampus:"CANDELARIA",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA"},
-{code:"DH143",	title:"CONFLICTOS INTERNACIONALES Y RELIGIÓN",,day:"Martes",	short:"Cir",	hour:"1114",campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA"},
-{code:"DH144",	title:"COMPETENCIAS CIUDADANAS",day:"Lunes",	short:"Cc",	hour:"1114",campus:"CANDELARIA",	faculty:"PROGRAMA CONTADURÍA PÚBLICA"},
-{code:"DH146",	title:"FORTALECIMIENTO COGNITIVO","Jueves"	short:"Fc",	hour:"1114",ampus:"CANDELARIA",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS"},
-{code:"DH146",	title:"FORTALECIMIENTO COGNITIVO",,day:"Martes",	short:"Fc",	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS"},
-{code:"DH146",	title:"FORTALECIMIENTO COGNITIVO",day:"Viernes",	short:"Fc",	hour:"1821", campus:"CHAPINERO",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS"},
-{code:"DH146",	title:"FORTALECIMIENTO COGNITIVO",day:"Lunes",	short:"Fc",	hour:"1114",campus:"NORTE",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS"},
-{code:"DH147",	title:"CINE DESDE LA PERSPECTIVA LATINOAMERICANA",,day:"Martes",	short:"Cpl",	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD DE CIENCIAS ECONÓMICAS Y SOCIALES"},
-{code:"DH148",	title:"ORGANIZACIONES SOCIALES Y MOVIMIENTO AGRARIO",	"Jueves" short:"Os",	hour:"1114",campus:"CANDELARIA",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES"},
-{code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Lunes",	short:"Cb",	hour:"1114",campus:"CANDELARIA",	faculty:"FACULTAD CIENCIAS DEL HÁBITAT" },
-{code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Jueves",	short:"Cb",	hour:"0811",	campus:"CHAPINERO",			faculty:"FACULTAD CIENCIAS DEL HÁBITAT" },
-{code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Viernes",	short:"Cb",	hour:"1114",campus:"CHAPINERO",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" },
-{code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Viernes",	short:"Cb",	hour:"0811",	campus:"CHAPINERO",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" },
-{code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Jueves",	short:"Da",	hour:"1114",campus:"CANDELARIA",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" },
-{code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Sábado",	short:"Da",	hour:"0710",	campus:"CANDELARIA",	faculty:"FACULTAD CIENCIAS DEL HÁBITAT" },
-code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Sábado",	short:"Da",	1013	campus:"CANDELARIA",faculty:"FACULTAD CIENCIAS DEL HÁBITAT" 
-code:"DH154",	title:"INTRODUCCIÓN A LA POLÍTICA PARA GENTE DECENTE",day:"Lunes",	short:"Pgd",	hour:"1114",campus:"CANDELARIA",faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES"
-code:"DH154",	title:"INTRODUCCIÓN A LA POLÍTICA PARA GENTE DECENTE",day:"Lunes",	short:"Pgd",	hour:"1821",	campus:"CANDELARIA",	faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES"
-code:"DH155",	title:"CREACIÓN POÉTICA",day:"Lunes",	short:"Cpo",	hour:"1114",campus:"CANDELARIA",	faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES"
-code:"DH157",	title:"CIUDADANÍA Y POLÍTICA",,day:"Martes",	short:"Cp",	hour:"1114",campus:"CHAPINERO",		 faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES"
-code:"DH159",	title:"CINE Y POLÍTICA COLOMBIANA",,day:"Martes",	short:"Cpc",	hour:"1114",campus:"CANDELARIA",		faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES"
-code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Jueves",	short:"Acm",	hour:"1114",campus:"CANDELARIA",faculty:"VPDH"
-code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",,day:"Martes",	short:"Acm",	hour:"1114",campus:"CHAPINERO",	faculty:"VPDH"
-code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Sábado",	short:"Acm",	hour:"0912",	campus:"CHAPINERO",	faculty:"VPDH"
-code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Sábado",	short:"Acm",	hour:"0912",	campus:"CHAPINERO",		.	faculty:"VPDH"
-code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Lunes",	short:"Acm",	hour:"1114",campus:"NORTE",	faculty:"VPDH"
-code:"DH164",	title:"CUERPO LENGUAJE Y COMUNICACIÓN",day:"Lunes",	short:"Clc",	hour:"1114",campus:"CANDELARIA",	faculty:"VPDH"
-code:"DH165",	title:"SOCIEDAD Y CULTURA EN LA  ERA DIGITAL",day:"Lunes",	short:"Scd"	hour:"1821",	campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA"
-code:"DH165",	title:"SOCIEDAD Y CULTURA EN LA  ERA DIGITAL",,day:"Martes",	short:"Scd"	hour:"1821",	campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA"
-code:"DH167",	title:"CIENCIA, FICCIÓN Y CULTURA",day:"Lunes",	short:"Cfc",	hour:"1114",campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA"
-code:"DH167",	title:"CIENCIA, FICCIÓN Y CULTURA",,day:"Martes",	short:"Cfc",	hour:"1114",campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA"
-code:"DH169",	title:"COMAMOS CARNE:  VERDADES Y NO VERDADES",day:"Miércoles",	short:"Cc"	hour:"1114",campus:"NORTE",faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS"
-code:"DH170",	title:"EL OCASO DEL AMOR: ENTRE LA ABNEGACIÓN Y LA LIBERTAD",>day:"Lunes",	short:"Oa"	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES"
-code:"DH174",	title:"CINE Y NARRATIVAS VISUALES",day:"Lunes",	short:"Cnv"	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES"
-code:"DH175",	title:"MÚSICA: HISTORIAS, JÓVENES Y REVOLUCIÓN",	day:"Martes",	short:"Mhj"	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES"
+Subject.create!(code:"DH103",	title:"ARTE CONTEMPORÁNEO EN JAPÓN", day:"Martes",	short:"Acj", 	hour:"1114",	campus:"CHAPINERO",	classroom:"103F", teacher:"KUMAGAI TAKAAKI",faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES")
+Subject.create!(code:"DH110",	title:"GUERRA Y CIVILIZACIÓN",day:"Lunes",	short:"Gc",	hour:"1114",campus:"CANDELARIA",	teacher:"GARAVITO GOMEZ MARIA CLARA",	faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES")
+Subject.create!(code:"DH130",	title:"FACTORES QUE AFECTAN LA BIODIVERSIDAD COLOMBIANA",	day:"Jueves", short:"Fab",	hour:"1114",		campus:"CANDELARIA",	teacher:"CAMACHO GARZON JANET",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH131",	title:"COMPRENSIÓN DE LOS COMPONENTES DEL CAMBIO GLOBAL Y DEL DESARROLLO HUMANO",day:"Lunes",	short:"Jd",	hour:"1114",campus:"CANDELARIA",	teacher:"CAMACHO GARZON JANET",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH132",	title:"JUGANDO A SER DETECTIVES",	day:"Jueves",short:"Jd",	hour:"1114",campus:"CANDELARIA",	teacher:"OCHOA CABEZAS DIANA CAROLINA",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH132",	title:"JUGANDO A SER DETECTIVES",	day:"Martes",	short:"Jd",	hour:"1114",campus:"CHAPINERO",	teacher:"OCHOA CABEZAS DIANA CAROLINA",	faculty:"DEPARTAMENTO  CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH133",	title:"BIOCINE: DE LA FICCIÓN A LA REALIDAD",	"Jueves", short:"Bc",	hour:"1114",campus:"CANDELARIA",	teacher:"LOZANO ARDILA LUCIA CRISTINA",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH133",	title:"BIOCINE: DE LA FICCIÓN A LA REALIDAD",	day:"Lunes",	short:"Bc",	hour:"1114", campus:"CANDELARIA",		teacher:"MUÑOZ ORTIZ ASTRID GEOVANA",	faculty:"DEPARTAMENTO CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH139",	title:"DURMIENDO CON EL ENEMIGO: EL EXTRAÑO MUNDO DE LAS ENFERMEDADES",	day:"Miércoles",	short:"Eme",	hour:"1114", campus:"NORTE",			faculty:"DEPARTAMENTO  CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH140",	title:"COLOMBIA A TRAVÉS DE SU BIODIVERSIDAD",	,day:"Martes",	short:"Cab",hour:"1114",hour:"1114",	campus:"CHAPINERO",	teacher:"VITOLO LOPEZ ADRIANA LEANDRA",	faculty:"DEPARTAMENTO  CIENCIAS BÁSICAS" )
+Subject.create!(code:"DH142",	title:"MUJERES Y CONOCIMIENTO",	day:"Miércoles",	short:"Mc",	hour:"1114",campus:"NORTE",		faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA")
+Subject.create!(code:"DH143",	title:"CONFLICTOS INTERNACIONALES Y RELIGIÓN",	day:"Jueves",	short:"Cir",	hour:"1114",ampus:"CANDELARIA",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA")
+Subject.create!(code:"DH143",	title:"CONFLICTOS INTERNACIONALES Y RELIGIÓN",day:"Martes",	short:"Cir",	hour:"1114",campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA")
+Subject.create!(code:"DH144",	title:"COMPETENCIAS CIUDADANAS",day:"Lunes",	short:"Cc",	hour:"1114",campus:"CANDELARIA",	faculty:"PROGRAMA CONTADURÍA PÚBLICA")
+Subject.create!(code:"DH146",	title:"FORTALECIMIENTO COGNITIVO",day:"Jueves",	short:"Fc",	hour:"1114",ampus:"CANDELARIA",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS")
+Subject.create!(code:"DH146",	title:"FORTALECIMIENTO COGNITIVO",day:"Martes",	short:"Fc",	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS")
+Subject.create!(code:"DH146",	title:"FORTALECIMIENTO COGNITIVO",day:"Viernes",	short:"Fc",	hour:"1821", campus:"CHAPINERO",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS")
+Subject.create!(code:"DH146",	title:"FORTALECIMIENTO COGNITIVO",day:"Lunes",	short:"Fc",	hour:"1114",campus:"NORTE",	faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS")
+Subject.create!(code:"DH147",	title:"CINE DESDE LA PERSPECTIVA LATINOAMERICANA",day:"Martes",	short:"Cpl",	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD DE CIENCIAS ECONÓMICAS Y SOCIALES")
+Subject.create!(code:"DH148",	title:"ORGANIZACIONES SOCIALES Y MOVIMIENTO AGRARIO",	day: "Jueves", short:"Os",	hour:"1114",campus:"CANDELARIA",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES")
+Subject.create!(code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Lunes",	short:"Cb",	hour:"1114",campus:"CANDELARIA",	faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
+Subject.create!(code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Jueves",	short:"Cb",	hour:"0811",	campus:"CHAPINERO",			faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
+Subject.create!(code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Viernes",	short:"Cb",	hour:"1114",campus:"CHAPINERO",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
+Subject.create!(code:"DH150",	title:"CÁTEDRA BOGOTÁ",day:"Viernes",	short:"Cb",	hour:"0811",	campus:"CHAPINERO",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
+Subject.create!(code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Jueves",	short:"Da",	hour:"1114",campus:"CANDELARIA",		faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
+Subject.create!(code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Sábado",	short:"Da",	hour:"0710",	campus:"CANDELARIA",	faculty:"FACULTAD CIENCIAS DEL HÁBITAT" )
+Subject.create!(code:"DH151",	title:"DIBUJO ARTÍSTICO",day:"Sábado",	short:"Da",	hour:"1013",	campus:"CANDELARIA",faculty:"FACULTAD CIENCIAS DEL HÁBITAT")
+Subject.create!(code:"DH154",	title:"INTRODUCCIÓN A LA POLÍTICA PARA GENTE DECENTE",day:"Lunes",	short:"Pgd",	hour:"1114",campus:"CANDELARIA",faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES")
+Subject.create!(code:"DH154",	title:"INTRODUCCIÓN A LA POLÍTICA PARA GENTE DECENTE",day:"Lunes",	short:"Pgd",	hour:"1821",	campus:"CANDELARIA",	faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES")
+Subject.create!(code:"DH155",	title:"CREACIÓN POÉTICA",day:"Lunes",	short:"Cpo",	hour:"1114",campus:"CANDELARIA",	faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES")
+Subject.create!(code:"DH157",	title:"CIUDADANÍA Y POLÍTICA",day:"Martes",	short:"Cp",	hour:"1114",campus:"CHAPINERO",		 faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES")
+Subject.create!(code:"DH159",	title:"CINE Y POLÍTICA COLOMBIANA",day:"Martes",	short:"Cpc",	hour:"1114",campus:"CANDELARIA",		faculty:"FACULTAD DE FILOSOFÍA Y HUMANIDADES")
+Subject.create!(code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Jueves",	short:"Acm",	hour:"1114",campus:"CANDELARIA",faculty:"VPDH")
+Subject.create!(code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Martes",	short:"Acm",	hour:"1114",campus:"CHAPINERO",	faculty:"VPDH")
+Subject.create!(code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Sábado",	short:"Acm",	hour:"0912",	campus:"CHAPINERO",	faculty:"VPDH")
+Subject.create!(code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Sábado",	short:"Acm",	hour:"0912",	campus:"CHAPINERO",		.	faculty:"VPDH")
+Subject.create!(code:"DH163",	title:"APRECIACIÓN COMPARADA DE LA MÚSICA",day:"Lunes",	short:"Acm",	hour:"1114",campus:"NORTE",	faculty:"VPDH")
+Subject.create!(code:"DH164",	title:"CUERPO LENGUAJE Y COMUNICACIÓN",day:"Lunes",	short:"Clc",	hour:"1114",campus:"CANDELARIA",	faculty:"VPDH")
+Subject.create!(code:"DH165",	title:"SOCIEDAD Y CULTURA EN LA  ERA DIGITAL",day:"Lunes",	short:"Scd"	hour:"1821",	campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA")
+Subject.create!(code:"DH165",	title:"SOCIEDAD Y CULTURA EN LA  ERA DIGITAL",,day:"Martes",	short:"Scd"	hour:"1821",	campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA")
+Subject.create!(code:"DH167",	title:"CIENCIA, FICCIÓN Y CULTURA",day:"Lunes",	short:"Cfc",	hour:"1114",campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA")
+Subject.create!(code:"DH167",	title:"CIENCIA, FICCIÓN Y CULTURA",day:"Martes",	short:"Cfc",	hour:"1114",campus:"CHAPINERO",	faculty:"DEPARTAMENTO DE FORMACIÓN LASALLISTA")
+Subject.create!(code:"DH169",	title:"COMAMOS CARNE:  VERDADES Y NO VERDADES",day:"Miércoles",	short:"Cc",	hour:"1114",campus:"NORTE",faculty:"FACULTAD DE CIENCIAS AGROPECUARIAS")
+Subject.create!(code:"DH170",	title:"EL OCASO DEL AMOR: ENTRE LA ABNEGACIÓN Y LA LIBERTAD",day:"Lunes",	short:"Oa",	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES")
+Subject.create!(code:"DH174",	title:"CINE Y NARRATIVAS VISUALES",day:"Lunes",	short:"Cnv",	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES")
+Subject.create!(code:"DH175",	title:"MÚSICA: HISTORIAS, JÓVENES Y REVOLUCIÓN",	day:"Martes",	short:"Mhj",	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES")
+
+
+
 code:"DH176",	title:"COMUNICACIÓN POLÍTICA",day:"Lunes",	short:"Cp",	hour:"1114",campus:"CHAPINERO",		faculty:"FACULTAD CIENCIAS ECONÓMICAS Y SOCIALES"
 code:"DH181",	title:"EDUCACIÓN, CONFLICTO Y PAZ",day:"Lunes",	short:"Ecp"	hour:"1114",campus:"CHAPINERO",	faculty:"FACULTAD DE CIENCIAS DE LA EDUCACIÓN"
 code:"DH184",	title:"ÍCONOS, IMÁGENES Y SUS LÓGICAS",,day:"Martes",	short:"Li",	hour:"1114",campus:"CHAPINERO",		faculty:"FACULTAD DE CIENCIAS DE LA EDUCACIÓN"
