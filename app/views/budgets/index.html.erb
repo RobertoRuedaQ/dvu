@@ -26,7 +26,7 @@
         <td><%= budget.item %></td>
         <td><%= budget.account %></td>
         <td><%= budget.department %></td>
-        <td><%= number_to_currency(budget.amount, precision: 0) %></td>
+        <td><%= number_to_currency(expenses_per_budget(budget),precision: 0) %> / <%= number_to_currency(budget.amount, precision: 0) %></td>
         <td><%= link_to budget do %>
           <i class="fas fa-eye"></i>
           <%end %>
