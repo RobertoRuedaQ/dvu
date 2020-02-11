@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'participants/index'
   resources :subjects
   root "data#index"
   devise_for :users
