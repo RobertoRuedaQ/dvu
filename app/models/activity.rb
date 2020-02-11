@@ -26,4 +26,12 @@ class Activity < ApplicationRecord
     end
     @@participants_total.reduce(:+)
   end
+
+  def self.uniq_participants
+    @@uniq_participants = []
+    all.each do |p|
+      @@uniq_participants << p.participants
+    end
+    @@uniq_participants.flatten!.uniq!
+  end
 end

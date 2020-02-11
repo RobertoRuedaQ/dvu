@@ -1,32 +1,41 @@
 <div class="jumbotron">
-  <div class="row w-100">
-          <div class="col-md-3">
-              <div class="card border-info mx-sm-1 p-3">
-                  <div class="card border-info shadow text-info p-3 my-card" ><span class="fas fa-dollar-sign" aria-hidden="true"></span></div>
-                  <div class="text-info text-center mt-3"><h5>Presupuesto</h5></div>
-                  <div class="text-info text-center mt-2"><h3><%= number_to_currency(total_budget, precision: 0) %></h3></div>
-              </div>
+  <div class="row w-100 mt-1">
+      <div class="col-md-3">
+          <div class="card border-info mx-sm-1 p-3">
+              <div class="card border-info shadow text-info p-3 my-card" ><span class="fas fa-dollar-sign" aria-hidden="true"></span></div>
+              <div class="text-info text-center mt-3"><h5>Presupuesto</h5></div>
+              <div class="text-info text-center mt-2"><h3><%= number_to_currency(total_budget, precision: 0) %></h3></div>
           </div>
-          <div class="col-md-3">
-              <div class="card border-info mx-sm-1 p-3">
-                  <div class="card border-info shadow text-info p-3 my-card"><span class="fas fa-hand-holding-usd" aria-hidden="true"></span></div>
-                  <div class="text-info text-center mt-3"><h5>Ejecutado</h5></div>
-                  <div class="text-info text-center mt-2"><h3><%= number_to_currency(total_expenses, precision: 0) %></h3></div>
-              </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card border-info mx-sm-1 p-3">
+              <div class="card border-info shadow text-info p-3 my-card"><span class="fas fa-hand-holding-usd" aria-hidden="true"></span></div>
+              <div class="text-info text-center mt-3"><h5>Ejecutado</h5></div>
+              <div class="text-info text-center mt-2"><h3><%= number_to_currency(total_expenses, precision: 0) %></h3></div>
           </div>
-          <div class="col-md-3">
-              <div class="card border-info mx-sm-1 p-3">
-                  <div class="card border-info shadow text-info p-3 my-card" ><span class="fab fa-angellist" aria-hidden="true"></span></div>
-                  <div class="text-info text-center mt-3"><h5>Actividades</h5></div>
-                  <div class="text-info text-center mt-2"><h3><%= total_activities %></h3></div>
-              </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card border-info mx-sm-1 p-3">
+              <div class="card border-info shadow text-info p-3 my-card" ><span class="fab fa-angellist" aria-hidden="true"></span></div>
+              <div class="text-info text-center mt-3"><h5>Actividades</h5></div>
+              <div class="text-info text-center mt-2"><h3><%= total_activities %></h3></div>
           </div>
-          <div class="col-md-3">
-              <div class="card border-info mx-sm-1 p-3">
-                  <div class="card border-info shadow text-info p-3 my-card" ><span class="fas fa-user-graduate" aria-hidden="true"></span></div>
-                  <div class="text-info text-center mt-3"><h5>Estudiantes</h5></div>
-                  <div class="text-info text-center mt-2"><h3><%= @all_participants %></h3></div>
-              </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card border-info mx-sm-1 p-3">
+              <div class="card border-info shadow text-info p-3 my-card" ><span class="fas fa-users" aria-hidden="true"></span></div>
+              <div class="text-info text-center mt-3"><h5>Participaciones</h5></div>
+              <div class="text-info text-center mt-2"><h3><%= @all_participants %></h3></div>
           </div>
-       </div>
+      </div>
+    </div>
+  <div class="row w-100 mt-4">
+    <div class="col-md-3">
+        <div class="card border-info mx-sm-1 p-3">
+          <div class="card border-info shadow text-info p-3 my-card" ><span class="fas fa-user-check" aria-hidden="true"></span></div>
+          <div class="text-info text-center mt-3"><h5>Impactos Únicos</h5></div>
+          <div class="text-info text-center mt-2"><h3><%= @uniq_participants_count %></h3></div>
+        </div>
+    </div>
   </div>
+</div>
