@@ -1,6 +1,6 @@
 class CampusController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_campu, only: [:show, :edit, :update, :destroy]
+  before_action :set_campus, only: [:show, :edit, :update, :destroy]
 
   # GET /campus
   # GET /campus.json
@@ -15,7 +15,7 @@ class CampusController < ApplicationController
 
   # GET /campus/new
   def new
-    @campu = Campus.new
+    @campus = Campus.new
   end
 
   # GET /campus/1/edit
@@ -25,15 +25,15 @@ class CampusController < ApplicationController
   # POST /campus
   # POST /campus.json
   def create
-    @campu = Campus.new(campu_params)
+    @campus = Campus.new(campus_params)
 
     respond_to do |format|
-      if @campu.save
-        format.html { redirect_to @campu, notice: 'Una nueva sede a sido creada.' }
-        format.json { render :show, status: :created, location: @campu }
+      if @campus.save
+        format.html { redirect_to @campus, notice: 'Una nueva sede a sido creada.' }
+        format.json { render :show, status: :created, location: @campus }
       else
         format.html { render :new }
-        format.json { render json: @campu.errors, status: :unprocessable_entity }
+        format.json { render json: @campus.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,12 +42,12 @@ class CampusController < ApplicationController
   # PATCH/PUT /campus/1.json
   def update
     respond_to do |format|
-      if @campu.update(campu_params)
+      if @campus.update(campus_params)
         format.html { redirect_to @campu, notice: 'La Sede ha sido actualizada.' }
-        format.json { render :show, status: :ok, location: @campu }
+        format.json { render :show, status: :ok, location: @campus }
       else
         format.html { render :edit }
-        format.json { render json: @campu.errors, status: :unprocessable_entity }
+        format.json { render json: @campus.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -55,7 +55,7 @@ class CampusController < ApplicationController
   # DELETE /campus/1
   # DELETE /campus/1.json
   def destroy
-    @campu.destroy
+    @campus.destroy
     respond_to do |format|
       format.html { redirect_to campus_url, notice: 'La sede ha sido eliminada.' }
       format.json { head :no_content }
@@ -64,12 +64,12 @@ class CampusController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_campu
-      @campu = Campus.find(params[:id])
+    def set_campus
+      @campus = Campus.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def campu_params
-      params.require(:campu).permit(:campus_name, :campus_code)
+    def campus_params
+      params.require(:campus).permit(:campus_name, :campus_code)
     end
 end
