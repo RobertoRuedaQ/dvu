@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :budgets
   resources :activities do
     get :convert
-  	get :pdf
+    get :pdf
+    get :delete_participants
   end
   resources :actions
   resources :places

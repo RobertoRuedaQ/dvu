@@ -87,8 +87,12 @@
         </thead>
         <tbody>
           <%@activity.participants.sort.each do |p| %>
-            <%= content_tag(:tr, content_tag(:th, "#{p}")) %>
-          <%end %>
+          <tr>
+            <%= content_tag(:th, "#{p}") %> 
+            <th><%= link_to "borrar", activity_delete_participants_path(@activity, participant: p) %></th>
+          </tr>
+
+          <%end%>
         </tbody>
       </table>
     </div>

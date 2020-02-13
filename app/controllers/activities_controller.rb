@@ -62,7 +62,13 @@ class ActivitiesController < ApplicationController
     else
       redirect_to @activity, notice: 'Participante no válido'
     end
-    
+  end
+
+  def delete_participants
+    @activity = Activity.find(params[:activity_id])
+    @activity.participants.delete(params[:participant])
+    @activity.save
+    redirect_to @activity, notice: "Participante retirado"
   end
 
   def pdf
@@ -97,5 +103,9 @@ class ActivitiesController < ApplicationController
 
     def activity_params
       params.require(:activity).permit(:type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id, :participants)
+    end
+
+    def filtering_params(params)
+      params.slice(:type, :area, :program)
     end
 end
