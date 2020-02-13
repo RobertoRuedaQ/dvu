@@ -28,7 +28,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.action_mailer.default_url_options = { :host => ENV['MAILER_URL'] }
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.perform_deliveries = true
   ActionMailer::Base.raise_delivery_errors = true
@@ -42,6 +42,7 @@ Rails.application.configure do
     :user_name          => ENV['MAIL_USERNAME'],
     :password           => ENV['MAIL_PASSWORD']
   }
+
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
