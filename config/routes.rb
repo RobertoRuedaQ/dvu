@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'participants/index'
   resources :subjects
-  root "data#index"
-  devise_for :users
   resources :expenses
   resources :budgets
   resources :activities do
@@ -19,6 +18,8 @@ Rails.application.routes.draw do
   resources :areas
   resources :types
   resources :transfers
+  root "data#index"
+
 
   patch '/participants', to: 'activities#participants', as: :participants
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
