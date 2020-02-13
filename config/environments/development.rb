@@ -28,8 +28,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.action_mailer.default_url_options = { host: 'sistemadvu.herokuapp.com' }
-
+  config.action_mailer.default_url_options = { :host => ENV['MAILER_URL'] }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.perform_deliveries = true
   ActionMailer::Base.raise_delivery_errors = true
@@ -40,8 +39,8 @@ Rails.application.configure do
     :port               => 587,
     :domain             => 'gmail.com', #you can also use google.com
     :authentication     => :plain,
-    :user_name          => 'sistemadvu@gmail.com',
-    :password           => 'Lasalle2020'
+    :user_name          => ENV['MAIL_USERNAME'],
+    :password           => ENV['MAIL_PASSWORD']
   }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
