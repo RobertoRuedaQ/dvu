@@ -7,8 +7,7 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-    @expenses = @activity.expenses
-    @total_expenses_by_activity = @activity.expenses_of_activity
+    set_expenses
   end
 
   def new
@@ -75,6 +74,7 @@ class ActivitiesController < ApplicationController
 
   def pdf
     @activity = Activity.find(params[:activity_id])
+    set_expenses
   end
 
   def convert
@@ -97,6 +97,11 @@ class ActivitiesController < ApplicationController
       @action = Action.all
       @program = Program.all
       @places = Place.all
+    end
+
+    def set_expenses
+      @expenses = @activity.expenses
+      @total_expenses_by_activity = @activity.expenses_of_activity
     end
 
     def valid_participant?(participant)
