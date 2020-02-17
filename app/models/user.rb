@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   ROLES=["Coordinador", "Director", "Profesional", "Secretaria"]
 
+  has_many :activities
 end

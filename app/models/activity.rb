@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
-  validates_presence_of :type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id, presence: true
+  validates_presence_of :type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id, :user_id, presence: true
   belongs_to :campus
   belongs_to :place
   belongs_to :type
@@ -8,6 +8,7 @@ class Activity < ApplicationRecord
   belongs_to :action
   belongs_to :program
   belongs_to :subprogram
+  belongs_to :user
 
   has_many :expenses
 
