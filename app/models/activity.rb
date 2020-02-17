@@ -35,4 +35,13 @@ class Activity < ApplicationRecord
     end
     @@uniq_participants.flatten!.uniq!
   end
+
+
+  def expenses_of_activity
+    exp = []
+    expenses.each do |e|
+      exp << e.amount   
+    end
+    exp.reduce(:+)
+  end
 end

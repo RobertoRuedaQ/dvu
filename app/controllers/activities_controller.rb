@@ -7,6 +7,8 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+    @expenses = @activity.expenses
+    @total_expenses_by_activity = @activity.expenses_of_activity
   end
 
   def new

@@ -83,32 +83,9 @@
   </div>
 
   <br>
-  <div class="row">
-    <div class="col-md-10">
-      <h3 class="text-left">Listado de participantes</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Código o cédula</th>
-            <th>Firma</th>
-          </tr>
-        </thead>
-        <tbody>
-          <%@activity.participants.sort.each do |p| %>
-          <tr>
-            <%= content_tag(:th, "#{p}") %> 
-            <th><%= link_to "borrar", activity_delete_participants_path(@activity, participant: p) %></th>
-          </tr>
-
-          <%end%>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <%= render "participants" %>
+  <br>
+  <%= render "show_expenses" %>
 
 
 </div>
