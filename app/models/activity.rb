@@ -18,7 +18,7 @@ class Activity < ApplicationRecord
     count
   end
 
-  scope :activities_of_the_month, -> {where("EXTRACT(MONTH FROM start_date) = ?", DateTime.now.month).select(:activity_name, :start_date) }
+  scope :activities_of_the_month, -> {where("EXTRACT(MONTH FROM start_date) = ?", DateTime.now.month).select(:activity_name, :start_date, :user_id) }
 
   def self.all_participants
     @@participants_total = []
