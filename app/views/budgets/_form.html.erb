@@ -13,27 +13,27 @@
 
   <div class="form-row">
     <div class="form-group col-md-3">
-      <%= form.label :item %>
+      <%= form.label :item, "Rubro" %>
       <%= form.text_field :item, class:"form-control" %>
     </div>
   
     <div class="form-group col-md-3">
-      <%= form.label :account %>
+      <%= form.label :account, "Cuenta" %>
       <%= form.text_field :account, class:"form-control" %>
     </div>
   
     <div class="form-group col-md-3">
-      <%= form.label :department %>
+      <%= form.label :department, "Departamento" %>
       <%= form.text_field :department, class:"form-control" %>
     </div>
   
     <div class="form-group col-md-3">
-      <%= form.label :amount %>
+      <%= form.label :amount, "Monto" %>
       <%= form.number_field :amount, class:"form-control" %>
     </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Registrar" %>
   </div>
 <% end %>

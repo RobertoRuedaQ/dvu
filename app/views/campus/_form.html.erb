@@ -12,18 +12,18 @@
   <% end %>
 <div class="form-row">
   <div class="form-group col-md-3">
-    <%= form.label :campus_name %>
+    <%= form.label :campus_name, "Nombre de la Sede" %>
     <%= form.text_field :campus_name %>
   </div>
 
   <div class="form-group col-md-3">
-    <%= form.label :campus_code %>
+    <%= form.label :campus_code, "Código" %>
     <%= form.text_field :campus_code %>
   </div>
 </div>
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Registrar" %>
   </div>
 <% end %>

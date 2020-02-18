@@ -22,13 +22,13 @@
   </div>
 
   <div class="form-group col-md-3">
-    <%= form.label :area %>
+    <%= form.label :area, "Área" %>
     <%= form.collection_select :area_id, @area, :id, :area_name, prompt: "Elige una área" %>
   </div>
 </div>
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Registrar" %>
   </div>
 <% end %>

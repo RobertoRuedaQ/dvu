@@ -12,18 +12,18 @@
   <% end %>
   <div class="form-row">
     <div class="form-group col-md-3">
-      <%= form.label :action_name %>
+      <%= form.label :action_name, "Nombre del Proceso" %>
       <%= form.text_field :action_name %>
     </div>
   
     <div class="form-group col-md-3">
-      <%= form.label :action_code %>
+      <%= form.label :action_code, "Código" %>
       <%= form.text_field :action_code %>
     </div>
   </div>
   
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Registrar Proceso" %>
   </div>
 <% end %>
