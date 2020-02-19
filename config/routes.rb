@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'participants/index'
+  get 'activities/own_activities'
   resources :subjects
   resources :expenses
   resources :budgets

@@ -53,6 +53,10 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def own_activities
+    @activities = Activity.own_activities(current_user)
+  end
+
   def participants
     @activity = Activity.find(params[:activity][:id])
     if valid_participant?(params[:activity][:participants]) 

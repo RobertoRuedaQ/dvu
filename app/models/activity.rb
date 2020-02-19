@@ -19,7 +19,7 @@ class Activity < ApplicationRecord
   end
 
   scope :activities_of_the_month, -> {where("EXTRACT(MONTH FROM start_date) = ?", DateTime.now.month).select(:activity_name, :start_date, :user_id) }
-
+  scope :own_activities, -> (user){where("user_id = ?", user.id)}
   def self.all_participants
     @@participants_total = []
     all.each do |p|

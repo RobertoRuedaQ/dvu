@@ -3,8 +3,10 @@
     Actividades
   </a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <%= link_to "Lista de actividades", activities_path, class: "dropdown-item" %>
+    <%= link_to "Mis actividades", activities_own_activities_path, class: "dropdown-item" %>
     <div class="dropdown-divider"></div>
     <%= link_to "Registrar actividad", new_activity_path, class: "dropdown-item" %>
+    <div class="dropdown-divider"></div>
+    <%= link_to "Lista de actividades", activities_path, class: "dropdown-item" %>
   </div>
 </li>
