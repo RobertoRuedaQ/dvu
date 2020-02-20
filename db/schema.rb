@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_17_160156) do
+ActiveRecord::Schema.define(version: 2020_02_19_212100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_02_17_160156) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "participants", default: [], array: true
     t.bigint "user_id"
+    t.text "audiences", default: [], array: true
     t.index ["action_id"], name: "index_activities_on_action_id"
     t.index ["area_id"], name: "index_activities_on_area_id"
     t.index ["campus_id"], name: "index_activities_on_campus_id"

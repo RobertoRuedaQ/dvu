@@ -70,7 +70,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-9 border border-secondary">
+    <div class="col-md-3 border border-secondary">
+      <ul>
+        <% @activity.audiences.each do |audience|%>
+          <li><%= audience %></li>
+        <%end %>
+      </ul>
+    </div>
+    <div class="col-md-6 border border-secondary">
       <%unless @activity.user == nil %>
       <p>
         <strong>Responsable:</strong>

@@ -13,6 +13,7 @@ class Activity < ApplicationRecord
   has_many :expenses
 
   VALID_PARTICIPANT_REGEX = /^\d{7,10}$/
+  AUDIENCE = [["Estudiantes","Estudiantes"], ["Administrativos","Administrativos"],["Docentes","Docentes"],["Egresados","Egresados"],["Externos","Externos"],["Comunidad Educativa","Comunidad educativa"],["Comunidad general","Comunidad general"]]
 
   def self.total_activities
     count
