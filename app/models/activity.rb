@@ -14,6 +14,7 @@ class Activity < ApplicationRecord
 
   VALID_PARTICIPANT_REGEX = /^\d{7,10}$/
   AUDIENCE = [["Estudiantes","Estudiantes"], ["Administrativos","Administrativos"],["Docentes","Docentes"],["Egresados","Egresados"],["Externos","Externos"],["Comunidad Educativa","Comunidad educativa"],["Comunidad general","Comunidad general"]]
+  COMUNICATION = [["Pieza para redes","Pieza para redes"], ["Póster","Póster"],["Banner para correo","Banner para correo"],["Video para pantallas","Video para pantallas"],["Correo masivo","Correo masivo"],["Volantes","Volantes"],["Registro fotográfico","Registro fotográfico"]]
 
   def self.total_activities
     count
