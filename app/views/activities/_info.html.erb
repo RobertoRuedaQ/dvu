@@ -1,13 +1,12 @@
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center align-items-center">
     <div class="col-md-10">
       <h1 class="text-center"><%= @activity.activity_name %></h1>
     </div>
   </div>
   <br>
   <br>
-
-  <div class="row">
+  <div class="row justify-content-center align-items-center">
     <div class="col-md-3 border border-secondary">
       <p>
         <strong>Tipo de actividad:</strong>
@@ -28,7 +27,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify-content-center align-items-center">
     <div class="col-md-3 border border-secondary">
       <p>
         <strong>Procesos:</strong>
@@ -49,7 +48,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify-content-center align-items-center">
     <div class="col-md-3 border border-secondary">
       <p>
         <strong>Fecha de Inicio:</strong>
@@ -69,8 +68,9 @@
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row justify-content-center align-items-center">
     <div class="col-md-3 border border-secondary">
+      <p><strong>Peril de participante</strong></p>
       <ul>
         <% @activity.audiences.each do |audience|%>
           <li><%= audience %></li>
@@ -88,11 +88,11 @@
       <%end %>
     </div>
   </div>
-
-  <br>
-  <%= render "participants" %>
-  <br>
-  <%= render "show_expenses" %>
-
-
 </div>
+<div class="container">
+<br>
+<%= render "participants" %>
+<br>
+<%= render "show_expenses" %>
+</div>
+

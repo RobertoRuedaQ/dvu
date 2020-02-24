@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Objetive:</strong><br>
+  <%= @report.objetive %>
+</p>
+
+<p>
+  <strong>Participants:</strong><br>
+  <%= @report.participants %>
+</p>
+
+<p>
+  <strong>Description:</strong><br>
+  <%= @report.description %>
+</p>
+
+<p>
+  <strong>Commitment:</strong><br>
+  <%= @report.commitment %>
+</p>
+
+<p>
+  <strong>Activity:</strong><br>
+  <%= @report.activity.activity_name %>
+</p>
+
+<%= link_to 'Editar', edit_report_path(@report) %> |
+<%= link_to 'Regresar', reports_path %>

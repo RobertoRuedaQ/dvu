@@ -1,0 +1,46 @@
+<%= form_with(model: report, local: true) do |form| %>
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> No se puede guardar este reporte porque:</h2>
+
+      <ul>
+        <% report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <strong><%= form.label :objetive, "Objetivo" %></strong><br>
+          <%= form.text_area :objetive %>
+        </div>
+        <div class="form-group col-md-12">
+          <strong><%= form.label :participants, "Participantes" %></strong> <br>
+          <%= form.text_area :participants %>
+        </div>
+
+        <div class="form-group col-md-12">
+          <strong><%= form.label :description, "Descripción" %></strong> <br>
+          <%= form.text_area :description %>
+        </div>
+
+        <div class="form-group col-md-12">
+          <strong><%= form.label :commitment, "Acuerdos" %></strong><br>
+          <%= form.text_area :commitment %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :activity_id, { :value => params[:activity_id]} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Crear Reporte" %>
+  </div>
+<% end %>

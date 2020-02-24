@@ -10,7 +10,9 @@
 </div>
 
 <%= link_to "Convertir a PDF", activity_convert_path(@activity), target: "_blank" %>
-
+<% if @activity.report %>
+  <%= link_to "Registrar reporte", new_report_path(activity_id: @activity)%>
+<%end %>
 <%= render "info" %>
 
 

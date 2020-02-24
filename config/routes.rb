@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reports
   devise_for :users
   get 'participants/index'
   get 'activities/own_activities'

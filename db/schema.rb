@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_21_172859) do
+ActiveRecord::Schema.define(version: 2020_02_24_152541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_02_21_172859) do
     t.bigint "user_id"
     t.text "audiences", default: [], array: true
     t.text "comunication", default: [], array: true
+    t.boolean "report", default: false
     t.index ["action_id"], name: "index_activities_on_action_id"
     t.index ["area_id"], name: "index_activities_on_area_id"
     t.index ["campus_id"], name: "index_activities_on_campus_id"
@@ -107,6 +108,17 @@ ActiveRecord::Schema.define(version: 2020_02_21_172859) do
     t.string "program_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.text "objetive"
+    t.text "participants"
+    t.text "description"
+    t.text "commitment"
+    t.bigint "activity_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["activity_id"], name: "index_reports_on_activity_id"
   end
 
   create_table "subareas", force: :cascade do |t|
@@ -187,4 +199,5 @@ ActiveRecord::Schema.define(version: 2020_02_21_172859) do
   add_foreign_key "activities", "users"
   add_foreign_key "expenses", "activities"
   add_foreign_key "places", "campus"
+  add_foreign_key "reports", "activities"
 end
