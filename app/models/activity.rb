@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
-  validates_presence_of :type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id, :report, :user_id, presence: true
+  validates_presence_of :type_id,:activity_name, :start_date, :end_date, :campus_id, :place_id, :area_id, :subarea_id, :action_id, :program_id, :subprogram_id, :user_id, presence: true
   belongs_to :campus
   belongs_to :place
   belongs_to :type
@@ -13,15 +13,17 @@ class Activity < ApplicationRecord
   has_many :expenses
 
   VALID_PARTICIPANT_REGEX = /^\d{7,10}$/
-  AUDIENCE = [["Estudiantes","Estudiantes"], ["Administrativos","Administrativos"],["Docentes","Docentes"],["Egresados","Egresados"],["Externos","Externos"],["Comunidad Educativa","Comunidad educativa"],["Comunidad general","Comunidad general"]]
-  COMUNICATION = [["Pieza para redes","Pieza para redes"], ["Póster","Póster"],["Banner para correo","Banner para correo"],["Video para pantallas","Video para pantallas"],["Correo masivo","Correo masivo"],["Volantes","Volantes"],["Registro fotográfico","Registro fotográfico"]]
+  AUDIENCE = [["Estudiantes","Estudiantes"],["Administrativos","Administrativos"],["Docentes","Docentes"],["Egresados","Egresados"],["Externos","Externos"],["Comunidad Educativa","Comunidad educativa"],["Comunidad general","Comunidad general"]]
+  COMUNICATION = [["Pieza para redes","Pieza para redes"],["Póster","Póster"],["Banner para correo","Banner para correo"],["Video para pantallas","Video para pantallas"],["Correo masivo","Correo masivo"],["Volantes","Volantes"],["Registro fotográfico","Registro fotográfico"]]
 
   def self.total_activities
     count
   end
 
   scope :activities_of_the_month, -> {where("EXTRACT(MONTH FROM start_date) = ?", DateTime.now.month).select(:activity_name, :start_date, :user_id) }
+  scope :activities_of_the_week, -> {where("start_date BETWEEN ? AND ?", DateTime.now, DateTime.now + 5.day).select(:activity_name, :start_date)}
   scope :own_activities, -> (user){where("user_id = ?", user.id)}
+
   def self.all_participants
     @@participants_total = []
     all.each do |p|
