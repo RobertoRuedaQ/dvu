@@ -4,22 +4,21 @@
       <%= form.hidden_field :id, value: @activity.id %>
       <%= form.label :participants, "Registrar participante" %>
       <%= form.number_field :participants, value: "", autofocus: true %>
-      <%= form.submit "Registrar participación" %>
+      <%= form.submit "Registrar participación", class: "btn btn-outline-dark" %>
+    <%end %>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "Convertir a PDF", activity_convert_path(@activity), target: "_blank", class: "btn btn-outline-dark" %>
+  </div>
+  <div class="col-md-2">
+    <% if @activity.have_report %>
+    <%= link_to "Registrar reporte", new_report_path(activity_id: @activity), class: "btn btn-outline-dark"%>
     <%end %>
   </div>
 </div>
+<br>
 
-<%= link_to "Convertir a PDF", activity_convert_path(@activity), target: "_blank" %>
-<% if @activity.have_report %>
-  <%= link_to "Registrar reporte", new_report_path(activity_id: @activity)%>
-<%end %>
 <%= render "info" %>
-
-
-
-
-
-
 
 <%= link_to 'Editar', edit_activity_path(@activity) %> |
 <%= link_to 'Regresar', activities_path %>

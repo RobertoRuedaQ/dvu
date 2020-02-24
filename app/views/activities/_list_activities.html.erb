@@ -15,8 +15,8 @@
       <th></th>
       <th>Nombre</th>
       <th>Fecha de Inicio</th>
-      <th>Lugar</th>
       <th>Tipo de actividad</th>
+      <th>Área</th>
       <th>Programa</th>
       <th>Responsable</th>
       <th colspan="3"></th>
@@ -32,8 +32,8 @@
         </td>
         <td><%= activity.activity_name %></td>
         <td><%= activity.start_date %></td>
-        <td><%= activity.place.place_name %></td>
         <td><%= activity.type.type_name %></td>
+        <td><%= activity.area.area_name %></td>
         <td><%= activity.program.program_name %></td>
         <% unless activity.user == nil %>
           <td><%= activity.user.first_name %> <%= activity.user.last_name %></td>
