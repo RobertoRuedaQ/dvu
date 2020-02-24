@@ -9,7 +9,7 @@ class Activity < ApplicationRecord
   belongs_to :program
   belongs_to :subprogram
   belongs_to :user
-
+  has_one :report
   has_many :expenses
 
   VALID_PARTICIPANT_REGEX = /^\d{7,10}$/

@@ -91,8 +91,18 @@
 </div>
 <div class="container">
 <br>
-<%= render "participants" %>
+<% if @activity.report%>
+  <%= render "report" %>
+<%end %>
 <br>
-<%= render "show_expenses" %>
+<% if @activity.participants.any? %>
+  <%= render "participants" %>
+<br>
+<%end %>
+
+<% if @activity.expenses%>
+  <%= render "show_expenses" %>
+<%end %>
+
 </div>
 

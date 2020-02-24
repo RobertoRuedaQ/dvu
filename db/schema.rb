@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_152541) do
+ActiveRecord::Schema.define(version: 2020_02_24_191951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_152541) do
     t.bigint "user_id"
     t.text "audiences", default: [], array: true
     t.text "comunication", default: [], array: true
-    t.boolean "report", default: false
+    t.boolean "have_report", default: false
     t.index ["action_id"], name: "index_activities_on_action_id"
     t.index ["area_id"], name: "index_activities_on_area_id"
     t.index ["campus_id"], name: "index_activities_on_campus_id"
