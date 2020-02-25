@@ -3,7 +3,7 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   def index
-    @activities = Activity.all
+    @activities = Activity.all.order(:start_date)
   end
 
   def show
@@ -54,7 +54,7 @@ class ActivitiesController < ApplicationController
   end
 
   def own_activities
-    @activities = Activity.own_activities(current_user)
+    @activities = Activity.own_activities(current_user).order(:start_date)
   end
 
   def participants

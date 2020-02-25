@@ -1,0 +1,18 @@
+<h1>¡Hola!</h1>
+
+<h2>Esta es la programación para esta semana:</h2>
+<p>
+  <ul>
+    <% @activities.each do |a| %>
+      <li><%= a.activity_name %> // <%= a.start_date.strftime("%A %d %b") %></li>
+    <%end %>
+  </ul>
+</p>
+
+<br>
+<p>Fraternalmente,</p>
+<p>Sistema DVU.</p>
+
+<p>
+  Pd:<span>Grandes Cosas son posibles</span>
+</p>
