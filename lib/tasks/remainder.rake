@@ -4,7 +4,7 @@ namespace :remainder do
     @activities = Activity.all
     @activities.each do |activity|
       if activity.have_report == true && activity.end_date == Time.now - 2.day
-        RemainderMailer.report(activity)
+        RemainderMailer.report(activity).deliver_now
       end
     end
   end
