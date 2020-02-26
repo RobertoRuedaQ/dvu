@@ -1,4 +1,4 @@
-<h1> Hola <%= @user.first_name %>! </h1>
+Hola <%= @user.first_name %>!
 
 <p>
   En nuestro registro se encuentra que la actividad "<%= @activity.activity_name %>" la cual requiere hacer un reporte. Si quieres puedes hacerlo dando clic <%= link_to "AQUÍ", new_report_url(activity_id: @activity) %>  o siguiendo las siguientes instrucciones:
