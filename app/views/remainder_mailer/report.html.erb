@@ -1,0 +1,22 @@
+<h1> Hola <%= @user.first_name %>! </h1>
+
+<p>
+  En nuestro registro se encuentra que la actividad "<%= @activity.activity_name %>" la cual requiere hacer un reporte. Si quieres puedes hacerlo dando clic <%= link_to "AQUÍ", new_report_url(activity_id: @activity) %>  o siguiendo las siguientes instrucciones:
+</p>
+
+<ol>
+  <li>Ingresa a la app</li>
+  <li>En la barra de navegación ve a Actividades/Mis actividades</li>
+  <li>Busca la actividad y da clic en el ojo</li>
+  <li>Da clic en el botón "Registrar reporte"</li>
+  <li>Llena todos los datos</li>
+  <li>Da clic en "Crear Reporte"</li>
+</ol>
+
+<p>Si tienes alguna duda no dudes contactar al administrador del servicio.</p>
+
+<p>Fraternalmente,
+  Sistema DVU
+</p>
+
+<p>Grandes cosas son posibles.</p>

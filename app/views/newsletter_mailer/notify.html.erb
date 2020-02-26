@@ -1,6 +1,6 @@
-<h1>¡Hola!</h1>
+<h1>¡Hola <%= @user.first_name %>!</h1>
 
-<h2>Esta es la programación para esta semana:</h2>
+<strong>Esta es la programación para esta semana en la dirección de Vida Universitaria:</strong>
 <p>
   <ul>
     <% @activities.each do |a| %>

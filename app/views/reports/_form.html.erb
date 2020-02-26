@@ -16,21 +16,21 @@
       <div class="form-row">
         <div class="form-group col-md-12">
           <strong><%= form.label :objetive, "Objetivo" %></strong><br>
-          <%= form.text_area :objetive %>
+          <%= form.text_area :objetive, class: "form-control", rows: "2" %>
         </div>
         <div class="form-group col-md-12">
           <strong><%= form.label :participants, "Participantes" %></strong> <br>
-          <%= form.text_area :participants %>
+          <%= form.text_area :participants, class: "form-control", rows: "2" %>
         </div>
 
         <div class="form-group col-md-12">
           <strong><%= form.label :description, "Descripción" %></strong> <br>
-          <%= form.text_area :description %>
+          <%= form.text_area :description, class: "form-control", rows: "4" %>
         </div>
 
         <div class="form-group col-md-12">
           <strong><%= form.label :commitment, "Acuerdos" %></strong><br>
-          <%= form.text_area :commitment %>
+          <%= form.text_area :commitment, class: "form-control", rows: "4" %>
         </div>
       </div>
     </div>
