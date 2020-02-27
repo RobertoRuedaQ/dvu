@@ -1,5 +1,5 @@
 every :monday, at: "8am" do
-  rake "rewsletter:send"
+  rake "newsletter:send"
 end
 
 every :day, at: "8am" do
