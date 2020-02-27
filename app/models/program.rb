@@ -1,3 +1,3 @@
 class Program < ApplicationRecord
-  has_many :subprograms
+  has_many :subprograms, dependent: :destroy
 end
