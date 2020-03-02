@@ -3,7 +3,11 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   def index
+    load_select_values
     @activities = Activity.all.order(:start_date)
+    filtering_params(params).each do |key, value|
+      @activities = @activities.public_send("filter_by_#{key}", value) if value.present?
+    end    
   end
 
   def show
@@ -117,6 +121,6 @@ class ActivitiesController < ApplicationController
     end
 
     def filtering_params(params)
-      params.slice(:type, :area, :program)
+      params.slice(:type_id, :area_id, :program_id)
     end
 end

@@ -23,6 +23,9 @@ class Activity < ApplicationRecord
   scope :activities_of_the_month, -> {where("EXTRACT(MONTH FROM start_date) = ?", DateTime.now.month).select(:activity_name, :start_date, :user_id) }
   scope :activities_of_the_week, -> {where("start_date BETWEEN ? AND ?", DateTime.now, DateTime.now + 5.day).select(:activity_name, :start_date)}
   scope :own_activities, -> (user){where("user_id = ?", user.id)}
+  scope :filter_by_area_id, -> (area_id){where("area_id = ?", area_id)}
+  scope :filter_by_type_id, -> (type_id){where("type_id = ?", type_id)}
+  scope :filter_by_program_id, -> (program_id){where("program_id = ?", program_id)}
 
   def self.all_participants
     @@participants_total = []
