@@ -10,36 +10,54 @@
       </ul>
     </div>
   <% end %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= form.label :expense_type, "Tipo de gasto" %></th>
+        <th><%= form.label :client_type, "Tipo de cliente" %></th>
+        <th><%= form.label :budget_id, "Rubro" %></th>
+        <th><%= form.label :name, "Nombre del cliente" %></th>
+        <th><%= form.label :bill_number, "Número de factura" %></th>
+        <th><%= form.label :siaf_code, "Código SIAF" %></th>
+        <th><%= form.label :amount, "Costo" %></th>
+        <th><%= form.label :date, "Fecha de registro" %></th>
+        <th><%= form.label :description, "Descripción" %></th>
+        <th><%= form.label :activity_id, "Actividad Vinculada" %></th>
+        <th><%= form.label :petty_cash, "¿Caja Menor?" %></th>
+      </tr>
+    </thead>
+  </table>
   <div class="form-row">
-    <div class="form-group col-md-2">
+    <div class="form-group col">
       <%= form.label :expense_type, "Tipo de gasto" %>
       <%= form.select :expense_type, Expense::EXPENSES_TYPES, prompt: "Elige Uno" %>
     </div>
   
-    <div class="form-group col-md-2">
+    <div class="form-group col">
       <%= form.label :client_type, "Tipo de cliente" %>
       <%= form.select :client_type, Expense::CLIENTS_TYPES, prompt: "elige Uno" %>
     </div>
 
 
-    <div class="form-group col-md-3">
+    <div class="form-group col">
       <%= form.label :budget_id, "Rubro" %>
       <%= form.collection_select :budget_id, @budget, :id, :item, prompt: "Elige Uno"%>
     </div>
   </div>
 
 <div class="form-row">
-  <div class="form-group col-md-3">
+  <div class="form-group col">
     <%= form.label :name, "Nombre del cliente" %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="form-group col-md-3">
+  <div class="form-group col">
     <%= form.label :bill_number, "Número de factura" %>
     <%= form.text_field :bill_number %>
   </div>
 
-  <div class="form-group col-md-3">
+  <div class="form-group col">
     <%= form.label :siaf_code, "Código SIAF" %>
     <%= form.text_field :siaf_code %>
   </div>
@@ -47,7 +65,7 @@
 </div>
 
 <div class="form-row">
-  <div class="form-group col-md-3">
+  <div class="form-group col">
     <%= form.label :amount, "Costo" %>
     <%= form.number_field :amount %>
   </div>
@@ -67,14 +85,14 @@
 
   
 <div class="form-row">
-  <div class="form-group col-md-3">
+  <div class="form-group col">
     <%= form.label :activity_id, "Actividad Vinculada" %>
     <%= form.collection_select :activity_id, @activity, :id, :activity_name%>
   </div>
 </div>
 
 <div class="form-row">
-  <div class="form-group col-md-3">
+  <div class="form-group col">
     <%= form.label :petty_cash, "¿Caja Menor?" %>
     <%= form.check_box :petty_cash %>
   </div>
