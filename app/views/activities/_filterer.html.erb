@@ -14,7 +14,11 @@
        <strong><%= form.label :program_id, "Programa" %></strong>
        <%= form.collection_select :program_id, @program, :id, :program_name, prompt:"Escoge uno", value: params[:program_id], class:"form-control form-control-sm form-inline" %>
      </div>
-     <div class="form-group col-md-3">
+     <div class="form-group col-md-1">
+      <strong><%= form.label :month, "Mes" %></strong>
+      <%= form.select :month, 1..12, value: params[:date], class:"form-control form-control-sm form-inline" %>
+    </div>
+     <div class="form-group col-md-1">
        <%= form.submit "filtrar", class: "btn btn-outline-dark"   %>
      </div>
      <%end %>

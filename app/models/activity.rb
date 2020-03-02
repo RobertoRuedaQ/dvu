@@ -26,6 +26,7 @@ class Activity < ApplicationRecord
   scope :filter_by_area_id, -> (area_id){where("area_id = ?", area_id)}
   scope :filter_by_type_id, -> (type_id){where("type_id = ?", type_id)}
   scope :filter_by_program_id, -> (program_id){where("program_id = ?", program_id)}
+  scope :filter_by_month, -> (month){where("EXTRACT(MONTH FROM start_date) = ?", month)}
 
   def self.all_participants
     @@participants_total = []

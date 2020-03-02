@@ -58,6 +58,7 @@ class ActivitiesController < ApplicationController
   end
 
   def own_activities
+    load_select_values
     @activities = Activity.own_activities(current_user).order(:start_date)
   end
 
@@ -121,6 +122,6 @@ class ActivitiesController < ApplicationController
     end
 
     def filtering_params(params)
-      params.slice(:type_id, :area_id, :program_id)
+      params.slice(:type_id, :area_id, :program_id, :month)
     end
 end
