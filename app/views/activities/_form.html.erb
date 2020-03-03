@@ -26,46 +26,46 @@
       <div class="container">
         <h2>Perfilamiento de la actividad</h3><br>
         <div class="form-row">
-          <div class="form-group">
+          <div class="form-group col-md-3">
             <strong><%= form.label :type_id, "Tipo de actividad" %></strong>
             <%= form.collection_select :type_id, @type, :id, :type_name, prompt: "Escoge uno", class:"form-control form-control-sm" %>
           </div>
       
-          <div class="form-group">
+          <div class="form-group col-md-3">
             <strong><%= form.label :area_id, "Área" %></strong>
             <%= form.collection_select :area_id, @area, :id, :area_name, prompt: "Escoge uno", class:"form-control form-control-sm" %>
           </div>
       
-          <div class="form-group">
+          <div class="form-group col-md-3">
             <strong><%= form.label :subarea_id, "Subárea" %></strong>
             <%= form.grouped_collection_select :subarea_id, @area, :subareas,:area_name, :id, :subarea_name, class:"form-control form-control-sm"  %>
           </div>
-      
-          <div class="form-group">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
             <strong><%= form.label :action_id, "Proceso" %>
             </strong>
             <%= form.collection_select :action_id, @action, :id, :action_name, prompt: "Escoge uno", class:"form-control form-control-sm" %>
           </div>
-      
-          <div class="form-group">
+          <div class="form-group col-md-2">
             <strong><%= form.label :program_id, "Programa" %></strong>
             <%= form.collection_select :program_id, @program, :id, :program_name,  prompt: "Escoge uno", class:"form-control form-control-sm" %>
           </div>
-      
-          <div class="form-group">
+          <div class="form-group col-md-2">
             <strong><%= form.label :subprogram_id, "Subprograma" %></strong>
             <%= form.grouped_collection_select :subprogram_id, @program, :subprograms, :program_name, :id, :subprogram_name, class:"form-control form-control-sm" %>
           </div>
+        </div>
 
           <div class="form-row"> 
             <div class="form-group col-md-6">
-              <strong><%= form.label :start_date, "Fecha de Inicio" %></strong>
-              <%= form.datetime_select :start_date, class:"form-control form-control-sm" %>
+              <strong><%= form.label :start_date, "F. Inicio" %></strong>
+              <%= form.datetime_select :start_date, minute_step: 30, class:"form-control form-control-sm" %>
             </div>
         
             <div class="form-group col-md-6">
-              <strong><%= form.label :end_date, "Fecha de Finalización" %></strong>
-              <%= form.datetime_select :end_date, class:"form-control form-control-sm" %>
+              <strong><%= form.label :end_date, "F. Final" %></strong>
+              <%= form.datetime_select :end_date,minute_step: 30, class:"form-control form-control-sm" %>
             </div>
           </div>
         </div>
