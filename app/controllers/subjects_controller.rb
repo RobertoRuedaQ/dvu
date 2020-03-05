@@ -14,16 +14,19 @@ class SubjectsController < ApplicationController
 
   # GET /subjects/new
   def new
+    set_campus
     @subject = Subject.new
   end
 
   # GET /subjects/1/edit
   def edit
+    set_campus
   end
 
   # POST /subjects
   # POST /subjects.json
   def create
+    set_campus
     @subject = Subject.new(subject_params)
 
     respond_to do |format|
@@ -40,6 +43,7 @@ class SubjectsController < ApplicationController
   # PATCH/PUT /subjects/1
   # PATCH/PUT /subjects/1.json
   def update
+    set_campus
     respond_to do |format|
       if @subject.update(subject_params)
         format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
@@ -65,6 +69,10 @@ class SubjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_subject
       @subject = Subject.find(params[:id])
+    end
+
+    def set_campus
+      @campus = Campus.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -24,8 +24,8 @@ class ActivitiesController < ApplicationController
   end
 
   def create
+    load_select_values
     @activity = Activity.new(activity_params)
-
     respond_to do |format|
       if @activity.save
         format.html { redirect_to @activity, notice: 'Una nueva actividad ha sido creada.' }
@@ -38,6 +38,7 @@ class ActivitiesController < ApplicationController
   end
 
   def update
+    load_select_values
     respond_to do |format|
       if @activity.update(activity_params)
         format.html { redirect_to @activity, notice: 'La actividad ha sido actualizada.' }

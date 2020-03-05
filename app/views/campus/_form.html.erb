@@ -4,7 +4,7 @@
       <h2><%= pluralize(campus.errors.count, "error") %> prohibited this campus from being saved:</h2>
 
       <ul>
-        <% campu.errors.full_messages.each do |message| %>
+        <% campus.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>

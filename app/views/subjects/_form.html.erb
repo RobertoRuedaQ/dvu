@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :campus_id, "Capus"%>
-    <%= form.text_field :campus_id %>
+    <%= form.label :campus_id, "Campus" %>
+    <%= form.collection_select :campus_id, @campus, :id, :campus_name %>
   </div>
 
   <div class="field">

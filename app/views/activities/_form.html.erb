@@ -2,7 +2,7 @@
   <%= form_with(model: activity, local: true) do |form| %>
     <% if activity.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+        <h2><%= pluralize(activity.errors.count, "error") %> No se pudo crear la actividad porque:</h2>
 
         <ul>
           <% activity.errors.full_messages.each do |message| %>
@@ -38,7 +38,7 @@
       
           <div class="form-group col-md-3">
             <strong><%= form.label :subarea_id, "Subárea" %></strong>
-            <%= form.grouped_collection_select :subarea_id, @area, :subareas,:area_name, :id, :subarea_name, class:"form-control form-control-sm"  %>
+            <%= form.grouped_collection_select :subarea_id, @area, :subareas,:area_name, :id, :subarea_name, prompt: "Escoge Uno", class:"form-control form-control-sm"  %>
           </div>
         </div>
         <div class="form-row">
@@ -53,7 +53,7 @@
           </div>
           <div class="form-group col-md-2">
             <strong><%= form.label :subprogram_id, "Subprograma" %></strong>
-            <%= form.grouped_collection_select :subprogram_id, @program, :subprograms, :program_name, :id, :subprogram_name, class:"form-control form-control-sm" %>
+            <%= form.grouped_collection_select :subprogram_id, @program, :subprograms, :program_name, :id, :subprogram_name, prompt: "Escoge Uno", class:"form-control form-control-sm" %>
           </div>
         </div>
 
@@ -77,7 +77,7 @@
       
           <div class="form-group col-md-6">
             <strong><%= form.label :place_id, "Lugar" %></strong>
-            <%= form.grouped_collection_select :place_id, @campus, :places, :campus_name, :id, :place_name, class:"form-control form-control-sm" %>
+            <%= form.grouped_collection_select :place_id, @campus, :places, :campus_name, :id, :place_name, prompt: "Escoge Uno", class:"form-control form-control-sm" %>
           </div>
         </div>
       </div>

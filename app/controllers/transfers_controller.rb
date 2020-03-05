@@ -66,8 +66,11 @@ class TransfersController < ApplicationController
       ActiveRecord::Base.transaction do
         sender = Budget.find(transfer_params[:sender_id])
         reciever = Budget.find(transfer_params[:receiver_id])
-        sender.update!(amount: sender.amount - transfer_params[:amount].to_i)
-        reciever.update!(amount: reciever.amount + transfer_params[:amount].to_i)
+        if sender.update!(amount: sender.amount - transfer_params[:amount].to_i) && reciever.update!(amount: reciever.amount + transfer_params[:amount].to_i)
+          redirect_to @transfer
+        else
+          render :new
+        end
       end
     end
 end

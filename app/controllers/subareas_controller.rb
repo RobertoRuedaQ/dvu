@@ -1,7 +1,7 @@
 class SubareasController < ApplicationController
   before_action :authenticate_user!
   before_action :set_subarea, only: [:show, :edit, :update, :destroy]
-  before_action :set_area, only: [:new, :edit]
+  before_action :set_area, only: [:new,:create, :edit, :update]
   # GET /subareas
   # GET /subareas.json
   def index
