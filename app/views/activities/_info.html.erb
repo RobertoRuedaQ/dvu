@@ -100,7 +100,7 @@
 <br>
 <%end %>
 
-<% if @activity.expenses%>
+<% if @activity.expenses.any?%>
   <%= render "show_expenses" %>
 <%end %>
 

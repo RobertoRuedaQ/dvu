@@ -1,1 +1,120 @@
-<%= render "info" %>
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-10">
+      <h1 class="text-center"><%= @activity.activity_name %></h1>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Tipo de actividad:</strong>
+        <%= @activity.type.type_name %>
+      </p>
+    </div>
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Área:</strong>
+        <%= @activity.area.area_name %>
+      </p>
+    </div>
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Subárea:</strong>
+        <%= @activity.subarea.subarea_name %>
+      </p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Procesos:</strong>
+        <%= @activity.action.action_name %>
+      </p>
+    </div>
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Programas:</strong>
+        <%= @activity.program.program_name %>
+      </p>
+    </div>
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Subprogramas:</strong>
+        <%= @activity.subprogram.subprogram_name %>
+      </p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Fecha de Inicio:</strong>
+        <%= @activity.start_date %>
+      </p>
+    </div>
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Fecha Final:</strong>
+        <%= @activity.end_date %>
+      </p>
+    </div>
+    <div class="col-md-3 border border-secondary">
+      <p>
+        <strong>Lugar:</strong>
+        <%= @activity.place.place_name %>
+      </p>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3 border border-secondary">
+      <p><strong>Peril de participante</strong></p>
+      <ul>
+        <% @activity.audiences.each do |audience|%>
+          <li><%= audience %></li>
+        <%end %>
+      </ul>
+    </div>
+    <div class="col-md-6 border border-secondary">
+      <%unless @activity.user == nil %>
+      <p>
+        <strong>Responsable:</strong>
+        <%= @activity.user.first_name %> <%=@activity.user.last_name %>
+      </p>
+      <%else %>
+        <p>N/A</p>
+      <%end %>
+    </div>
+  </div>
+</div>
+<div class="container">
+<br>
+<div class="row">
+  <div class="col-md-10">
+    <h3 class="text-left">Listado de participantes</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-striped table-responsive-sm">
+      <thead>
+        <tr>
+          <th>Código o cédula</th>
+          <th>Firma</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%@activity.participants.sort.each do |p| %>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <%= content_tag(:th, "#{p}") %> 
+          <th></th>
+        </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>
