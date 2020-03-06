@@ -3,7 +3,7 @@
     <%= form_with(model: @activity, url: participants_path,  local: true) do |form| %>
       <%= form.hidden_field :id, value: @activity.id %>
       <%= form.label :participants, "Registrar participante" %>
-      <%= form.number_field :participants, value: "", autofocus: true %>
+      <%= form.number_field :participants, value: "" %>
       <%= form.submit "Registrar participación", class: "btn btn-outline-dark" %>
     <%end %>
   </div>
