@@ -17,7 +17,7 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <strong><%= form.label :activity_name, "Nombre de la actividad" %></strong>
-            <%= form.text_field :activity_name, class:"form-control" %>
+            <%= form.text_field :activity_name, autofocus: true, class:"form-control" %>
           </div>
         </div>
       </div>
@@ -81,43 +81,33 @@
           </div>
         </div>
       </div>
-    </div>
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h2>Otros datos de la actividad</h2>
       <div class="form-row">
-        <div class="form-group col-md-12">
-          <strong><%= form.label :audiences, "Público objetivo" %></strong>
-           <br>
+        <div class="form-group col-md-12 form-check form-check-inline">
+          <strong><%= form.label :audiences, "Público objetivo:", class: "mr-2" %></strong>
           <%= form.collection_check_boxes(:audiences, Activity::AUDIENCE, :last, :last)%>
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-md-12">
-          <strong><%= form.label :comunication, "Necesidades de Comunicación" %></strong>
-           <br>
+        <div class="form-group col-md-12 form-check form-check-inline">
+          <strong><%= form.label :comunication, "Necesidades de Comunicación:" %></strong>
           <%= form.collection_check_boxes(:comunication, Activity::COMUNICATION, :last, :last)%>
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-md-3">
-          <strong><%= form.label :have_report, "¿Requiere reporte?" %></strong><br>
-          <%= form.check_box :have_report %>
+        <div class="form-group col-md-3 form-check form-check-inline">
+          <strong><%= form.label :have_report, "¿Requiere reporte?" %></strong> <%= form.check_box :have_report %>
         </div>
       </div>
     </div>
   </div>
-
-
   <div class="form-group">
     <%= form.hidden_field :user_id, value: current_user.id%>
   </div>
-
-    <div class="actions">
-      <%= form.submit "Registrar Actividad", data:{ disable_with: false }, class: "btn btn-outline-dark"   %>
-    </div>
+      <%= form.submit "Registrar Actividad", class: "btn btn-outline-dark"%>
   <% end %>
-
 </div>
 
