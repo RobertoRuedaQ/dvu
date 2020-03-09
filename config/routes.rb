@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :reports
   devise_for :users
   get 'participants/index'
   get 'activities/own_activities'
@@ -7,10 +6,12 @@ Rails.application.routes.draw do
   resources :expenses
   resources :budgets
   resources :activities do
+    resources :reports, only: [:new, :show, :create, :edit, :update, :destroy]
     get :convert
     get :pdf
     get :delete_participants
   end
+  get "reports/index"
   resources :actions
   resources :places
   resources :campus

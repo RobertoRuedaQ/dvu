@@ -1,4 +1,4 @@
-<%= form_with(model: report, local: true) do |form| %>
+<%= form_with(model: [@activity, report], local: true) do |form| %>
   <% if report.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(report.errors.count, "error") %> No se puede guardar este reporte porque:</h2>
@@ -37,7 +37,7 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :activity_id, { :value => params[:activity_id]} %>
+    <%= form.hidden_field :activity_id, value: @activity.id %>
   </div>
 
   <div class="actions">

@@ -12,7 +12,7 @@
   </div>
   <div class="col-md-2">
     <% if @activity.have_report %>
-    <%= link_to "Registrar reporte", new_report_path(activity_id: @activity), class: "btn btn-outline-dark"%>
+    <%= link_to "Registrar reporte", new_activity_report_path(@activity), class: "btn btn-outline-dark"%>
     <%end %>
   </div>
 </div>

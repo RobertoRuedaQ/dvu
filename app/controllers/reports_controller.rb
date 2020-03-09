@@ -15,10 +15,12 @@ class ReportsController < ApplicationController
   # GET /reports/new
   def new
     @report = Report.new
+    @activity = Activity.find(params[:activity_id])
   end
 
   # GET /reports/1/edit
   def edit
+    @activity = Activity.find(params[:activity_id])
   end
 
   # POST /reports
@@ -28,7 +30,7 @@ class ReportsController < ApplicationController
 
     respond_to do |format|
       if @report.save
-        format.html { redirect_to @report, notice: 'Report was successfully created.' }
+        format.html { redirect_to  reports_index_url, notice: 'El reporte ha sido creado exitosamente.' }
         format.json { render :show, status: :created, location: @report }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class ReportsController < ApplicationController
   def update
     respond_to do |format|
       if @report.update(report_params)
-        format.html { redirect_to @report, notice: 'Report was successfully updated.' }
+        format.html { redirect_to activity_report_path(@report.activity.id, @report), notice: 'El reporte ha sido actualizado exitosamente.' }
         format.json { render :show, status: :ok, location: @report }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class ReportsController < ApplicationController
   def destroy
     @report.destroy
     respond_to do |format|
-      format.html { redirect_to reports_url, notice: 'Report was successfully destroyed.' }
+      format.html { redirect_to index_reports_url, notice: 'El reporte ha sido eliminado.' }
       format.json { head :no_content }
     end
   end

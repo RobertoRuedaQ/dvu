@@ -18,16 +18,16 @@
         <td><%= report.activity.activity_name %></td>
         <td><%= report.commitment %></td>
         <td><%= report.objetive %></td>
-        <td><%= link_to report do %>
+        <td><%= link_to activity_report_path(report.activity.id, report) do %>
           <i class="fas fa-eye"></i>
         <%end %>
         </td>
         <% if report.activity.user == current_user %>
-          <td><%= link_to edit_report_path(report) do %>
+          <td><%= link_to edit_activity_report_path(report.activity.id, report) do %>
             <i class="far fa-edit"></i>
           <%end %>
           </td>
-          <td><%= link_to report, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <td><%= link_to activity_report_path(report.activity.id, report), method: :delete, data: { confirm: 'Are you sure?' } do %>
             <i class="far fa-trash-alt"></i>
           <%end %>
           </td>
