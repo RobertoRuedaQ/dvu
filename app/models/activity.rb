@@ -47,6 +47,16 @@ class Activity < ApplicationRecord
     @@uniq_participants.flatten!.uniq!
   end
 
+  def self.participants_per_activity
+    participants_per_activity = []
+    all.each do |activity|
+      unless activity.participants.empty?
+        participants_per_activity << activity
+      end 
+      participants_per_activity
+    end
+  end
+
 
   def expenses_of_activity
     exp = []

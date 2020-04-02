@@ -1,3 +1,35 @@
+<!-- <div class="row">
+  <div class="col-md-10">
+    <h1>Participantes por actividad</h1>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+<div class="row">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Actividad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @participants_per_activity.each do |activity| %>
+    <div>
+      <tr>
+        <th><%= activity.activity_name %>  -   <%= activity.end_date.strftime("%F") %></th>
+      </tr>
+      
+      <% activity.participants.each do |participant| %>
+        <tr>
+          <th><%= participant %></th>
+        </tr>
+      <%end %>
+    </div>
+    <%end %>
+  </tbody>
+</table> -->
+<%= @participants_per_activity %>
+
+
 <div class="row">
   <div class="col-md-10">
     <h1>Participantes de nuestras actividades</h1>
