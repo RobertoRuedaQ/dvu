@@ -16,7 +16,7 @@
     <div>
       <% if activity.participants.any? %>
         <tr>
-          <th><%= activity.activity_name %>  -   <%= activity.end_date.strftime("%F") %></th>
+          <th><%= activity.activity_name %>  --   <%= activity.end_date.strftime("%F") %>  --   <%= activity.place.place_name %> (<%= activity.campus.campus_name %>)</th>
         </tr>
         <% activity.participants.each do |participant| %>
           <tr>
