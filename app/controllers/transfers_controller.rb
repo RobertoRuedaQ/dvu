@@ -67,7 +67,7 @@ class TransfersController < ApplicationController
         sender = Budget.find(transfer_params[:sender_id])
         reciever = Budget.find(transfer_params[:receiver_id])
         if sender.update!(amount: sender.amount - transfer_params[:amount].to_i) && reciever.update!(amount: reciever.amount + transfer_params[:amount].to_i)
-          redirect_to @transfer
+          notice: 'Se han actualizado los presupuestos.'
         else
           render :new
         end
